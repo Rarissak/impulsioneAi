@@ -16,7 +16,7 @@ button, #headerSearch input
 }
 
 /*===- Configuração da caixa acima da listra -===*/
-#headerContainer
+#headerUpper
 {
     display: flex;
     justify-content: space-between;

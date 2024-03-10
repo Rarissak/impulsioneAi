@@ -9,7 +9,8 @@ function Header()
 {
     return (
         <div>
-             <div id='headerContainer'>
+            // Parte da logo e butões acima da listra
+             <div id='headerUpper'>
 
                 <div id='logo'>
                     <h1 id="headerSiteName" color='#ff7d1e' className='centralizeItems'> 
@@ -21,15 +22,20 @@ function Header()
                     </h1>
                 </div>
 
+                // Div para alinhar os elementos com a altura da logo
                 <div id='align'>
+                    
+                    // Botão Home
                     <button 
                     className="headerScreenButtons, headerButtonSelected"
                     >Home</button>
 
+                    // Botão Sobre
                     <button 
                     className="headerScreenButtons"
                     >Sobre</button>
-
+                    
+                    // Barra de pesquisa 
                     <div
                     className='centralizeItems' id="headerSearch">
                         <input
@@ -40,7 +46,7 @@ function Header()
                         <img src={SearchIconSvg} alt="Icone de Lupa, com o sentido de buscar informações" />
                     </div>
                     
-
+                    // Botão Login
                     <button 
                     id='headerLogin'
                     className='centralizeItems, headerScreenButtons'>
@@ -48,6 +54,7 @@ function Header()
                         <span>Login</span>  
                     </button>
 
+                    // Botão Área Páceiros
                     <button
                     id='headerParceiros'
                     className='centralizeItems, headerScreenButtons'> 
@@ -59,13 +66,15 @@ function Header()
 
             </div>
 
+            // Listra
             <hr id='headerHR' 
                 style={{ 
                         width: '100%', // Largura da linha horizontal
                         height: '5px', // Espessura da linha horizontal
                         backgroundColor: '#7900c3' // Cor de fundo da linha horizontal
                     }} />
-        
+
+            // Botões das Categórias/Nichos do site
             <div id='headerCategory'>
                 <button 
                 className='headerCategoryButtons'
