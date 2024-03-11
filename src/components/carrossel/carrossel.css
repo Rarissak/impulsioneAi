@@ -1,0 +1,10 @@
+.slide-item {
+    width: 40rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.slide-box {
+    width: 40rem;
+}
