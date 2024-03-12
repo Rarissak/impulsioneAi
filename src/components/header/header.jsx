@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import '../../index.css'
+import '../../index.css';
 import HandshakeIconSvg from '../../assets/handshakeIcon.svg';
 import SearchIconSvg from '../../assets/searchIcon.svg';
 import UserIconSvg from '../../assets/userIcon.svg';
