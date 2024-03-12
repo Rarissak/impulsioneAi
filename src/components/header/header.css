@@ -48,6 +48,7 @@ button, #headerSearch input
     letter-spacing: -1.5%;
     height: 30px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .headerScreenButtons:hover

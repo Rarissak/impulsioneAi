@@ -1,9 +1,9 @@
 import React from 'react';
 import './header.css';
-import '../../index.css'
-import HandshakeIconSvg from '../../icons/handshakeIcon.svg';
-import SearchIconSvg from '../../icons/searchIcon.svg';
-import UserIconSvg from '../../icons/userIcon.svg';
+import '../../index.css';
+import HandshakeIconSvg from '../../assets/handshakeIcon.svg';
+import SearchIconSvg from '../../assets/searchIcon.svg';
+import UserIconSvg from '../../assets/userIcon.svg';
 import LogoDescritivaIcon from '../../assets/logoDescritivaIcon.svg';
 
 function Header()
@@ -51,7 +51,7 @@ function Header()
                     id='headerParceiros'
                     className='centralizeItems, headerScreenButtons'> 
                         <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon'/>
-                        <span>Área Páceiros</span> 
+                        <span>Área Parceiros</span> 
                     </button>
             
                 </div>
