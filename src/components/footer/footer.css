@@ -1,0 +1,40 @@
+.footer {
+    background-color: #CE5700;
+    color: #fff;
+    padding: 20px;
+    text-align: end;
+    padding: 3.4em;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  #copyright {
+    font-size: 0.7em;
+    color:#FFC79E;
+    align-self: flex-end;
+  }
+
+  .redes-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .redes-links_p-redes {
+    align-self: center;
+  }
+
+  .redes-links_img-redes a {
+    display: inline-block;
+     margin-right: 1.2em; /*fiz assim pq o space-between não tava pegando por nada */
+  }
+
