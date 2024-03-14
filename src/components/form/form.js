@@ -1,7 +1,7 @@
 import React from "react";
 import './form.css'
-import FacebookIcon from "../../icons/facebookIcon.svg";
-import InstagramIcon from "../../icons/instagramIcon.svg";
+import FacebookIcon from "../../icons/iconFacebook.svg";
+import InstagramIcon from "../../icons/iconInstagram.svg";
 function Form()
 {
     return(
