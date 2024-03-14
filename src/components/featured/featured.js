@@ -9,7 +9,7 @@ function Featured()
         <div id="featuredContainer">  {/*<- Vai centralizar todo o componente*/}
             
              {/*  Botão */}
-            <button id="featuredButton">NOSSOS DETAQUES</button>
+            <button id="featuredButton">NOSSOS DESTAQUES</button>
 
              {/*  Caixa que vai conter os destaques*/}
             <div id="featured">
