@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Inter';
+}
+#form
+{
+  display: flex;
+  justify-content: center;
+  
+}
+
+#formContainer
+{
+    width: 50%;
+    
+}
+
+
+/*Configuração dos campos*/
+.fieldType1
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fieldType2 .nameField
+{
+    margin-right: 10px;
+}
+
+.nameField
+{
+    color: #CC78FF;
+    font-weight: 700;
+}
+
+
+
+/*Configuração das legendas de alguns campos*/
+#alertLocationField
+{
+    font-size: 12.5px;
+}
+
+#passwordRequery
+{
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#passwordRequery span
+{
+    font-size: 10.5px;
+    color:  #919191;
+}
+
+/*Configuração do campo Opcional*/
+.optionalField
+{
+    display: flex;
+    gap: 15px;
+}
+
+.optional
+{
+    font-size: 11px;
+    color: #FF8D3B;
+}
+
+#inputOptional
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+    
+}
+/*Configuração do campo modalidade*/
+#radioContainer
+{
+    margin-left: 35px;
+}
+
+#fieldRadio
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.radioOption
+{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/*Configuração do campo Plano escolhido*/
+#selectField label
+{
+    color: #8A00DE;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+#selectField select
+{
+    
+    background: #CC78FF;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 25px;
+    border-color: rgba(73, 4, 4, 0);
+    padding: .2rem .5rem;
+    text-align: center;
+}
+
+
+
+#form input
+{
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    border-color: #f3f3f300;
+    padding: .2rem .6rem;
+}
+
+.fieldSetConfig
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-color: #8900de00;
+}
+
+
+/*Configuração do campo Formas de contato*/
+#contactFormsH1
+{
+    margin-top: 30px;
+    color: #FF7D1E;
+    font-weight: 800;
+}
+
+.iconField
+{
+    display: flex;
+}
+
+.iconField img
+{
+    margin-right: 5px;
+}
+
