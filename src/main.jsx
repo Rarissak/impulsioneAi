@@ -11,6 +11,7 @@ import StoreIcon from './assets/storeIcon.svg';
 import PuzzleIcon from './assets/puzzleIcon.svg'; 
 import Informations from './components/informations/informations.jsx';
 import Form from './components/form/form.jsx'
+import Featured from './components/featured/featured.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -25,6 +26,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <br></br>
 
     </div>
+    <Featured title={"NOSSOS DESTAQUES"}></Featured>
+        {/* <Featured titleBox={"NOSSOS DETAQUES"}
+              name1={Teste}
+              nincho1={teste}
+              name2={Teste}
+              nincho2={teste}
+              name3={Teste}
+              nincho3={teste}
+              name4={Teste}
+              nincho4={teste}
+              name5={Teste}
+              nincho5={teste}></Featured> */}
     <Carrossel></Carrossel>
     <BoxInfo title={"NOSSO OBJETIVO"}></BoxInfo>
     <div>

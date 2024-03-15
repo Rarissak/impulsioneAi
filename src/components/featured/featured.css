@@ -1,0 +1,75 @@
+*{  /*Todos os elementos vão seguir as seguintes configurações*/
+    margin: 0;  /*Tirando a margem*/
+    padding: 0; /*Tirando o espaçamento dentro do elemento*/
+    box-sizing: border-box; 
+}
+
+/*Featured Container - Centralizando todos os elementos*/
+#featuredContainer
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#featuredContainer button
+{
+    margin-top: 20px; /*Abrindo uma margem entre o botão e oq tiver em cima */
+    background-color: #ff7d1e; /*Definindo cor do botão */
+    color: white; /*Definindo cor do texto do botão */
+    font-size: 22px; /*Definindo tamanho da fonte do texto */
+    font-weight: 800; /*Definindo a espessura fonte*/
+
+    /*Definindo margem na direita e na esquerda do botão.*/
+    margin-left: 75px;
+    margin-right: 75px;
+
+    text-align: center;  /*Centralizando o texto no botão - pode n ser necessário*/
+}
+
+/*Featured*/
+#featured
+{
+    margin-top: 15px; /*Abrindo uma margem entre os destaques e o botão*/
+    display: flex;
+    justify-content: center; /*Centralizando todos os elementos no centro da tela*/
+    margin-bottom: 15px; /*Abrindo uma margem no fundo dele para futuros elementos*/
+    gap: 35px;  /*Abrindo um espaço entre cada elemento*/
+}
+
+/*Featured Square*/
+.featuredSquare
+{
+    display: flex; /*Definindo o formato de exibição para flexível*/
+    justify-content: center; /*Centralizando horizontalmente os elementos */
+    flex-direction: column;/*Com isto a cenrralização horizontal vira vertical. */
+    text-align: center; /*Centralizando texto dentro do retangulo*/
+    background-color: #ffe1cc; /*Definindo a cor de fundo*/
+    width: 15%; /*Definindo o tamanho dele*/
+    border-radius: 20px; /*Arredodamento do retangulo*/
+}
+
+.featuredSquare img
+{
+    /*Arredodando a parte de cima da foto, enquanto deixa a parte de baixo normal*/
+    border-radius: 20px 20px 0px  0px;
+  
+}
+
+
+/*Name and Niche configuration*/
+
+.featuredName
+{
+    margin-top: 5px; /*Espaçamento em cima, para deixar mais espaço entre o texto e a borda da foto*/
+    color: #d16210;
+    font-size: 20px;
+    font-weight:700;
+}
+
+.featuredNiche
+{
+    color: #d16210;
+    margin-bottom: 5px; /*Espaçamento em baixo, para deixar mais espaço entre o texto e a borda do retangulo*/
+}
