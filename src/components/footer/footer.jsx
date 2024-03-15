@@ -1,12 +1,12 @@
 import React from 'react';
 import './footer.css';
 import LogoBranca from '../../assets/Logo-branca.svg'
-import youtube from '../../icons/iconYoutube.svg'
-import twitter from '../../icons/iconTwitter.svg'
-import linkedin from '../../icons/iconLinkedin.svg'
-import facebook from '../../icons/iconFacebook.svg'
-import instagram from '../../icons/iconInstagram.svg'
-import telegram from '../../icons/iconTelegram.svg' 
+import youtube from '../../assets/iconYoutube.svg'
+import twitter from '../../assets/iconTwitter.svg'
+import linkedin from '../../assets/iconLinkedin.svg'
+import facebook from '../../assets/iconFacebook.svg'
+import instagram from '../../assets/iconInstagram.svg'
+import telegram from '../../assets/iconTelegram.svg' 
 
 const Footer = () => {
   return (
