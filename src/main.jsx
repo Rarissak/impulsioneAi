@@ -10,6 +10,7 @@ import GrowIcon from './assets/growIcon.svg';
 import StoreIcon from './assets/storeIcon.svg';
 import PuzzleIcon from './assets/puzzleIcon.svg'; 
 import Informations from './components/informations/informations.jsx';
+import Form from './components/form/form.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,6 +18,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BarraLinks></BarraLinks>
     <div>
       <br></br>
+
+    </div>
+    <Form></Form>
+    <div>
+      <br></br>
+
     </div>
     <Carrossel></Carrossel>
     <BoxInfo title={"NOSSO OBJETIVO"}></BoxInfo>
