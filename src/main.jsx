@@ -12,6 +12,7 @@ import PuzzleIcon from './assets/puzzleIcon.svg';
 import Informations from './components/informations/informations.jsx';
 import Form from './components/form/form.jsx'
 import Featured from './components/featured/featured.jsx'
+import BoxVideo from './components/boxVideo/boxVideo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -57,6 +58,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </div>
     </div>
 
+    <BoxInfo></BoxInfo>
+    <BoxVideo video={"https://www.youtube.com/embed/FqnAV6tkwzA"} 
+              title={"Como usar nossa plataforma?"} 
+              text={"Para que você consiga usufruir de todos os benefícios da nossa plataforma, criamos um tutorial que irá explicar de maneira breve como navegar na nossa plataforma."}>
+    </BoxVideo> 
     <Footer></Footer>
   </React.StrictMode>,
 )
