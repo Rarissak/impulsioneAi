@@ -13,47 +13,66 @@
 }
 
 
-#featuredContainer button
-{
-    margin-top: 20px; /*Abrindo uma margem entre o botão e oq tiver em cima */
-    background-color: #ff7d1e; /*Definindo cor do botão */
-    color: white; /*Definindo cor do texto do botão */
-    font-size: 22px; /*Definindo tamanho da fonte do texto */
-    font-weight: 800; /*Definindo a espessura fonte*/
+#featuredTitle {
+    font-size: 30px;
+    text-align: center;
+    background-color: #d16210;
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: "Baloo 2", sans-serif;
+}
 
-    /*Definindo margem na direita e na esquerda do botão.*/
+/* #featuredContainer button
+{
+    margin-top: 20px; *Abrindo uma margem entre o botão e oq tiver em cima /
+    background-color: #ff7d1e; //Definindo cor do botão// TESTAR PRA VER SE DÁ ERRO
+    color: white; Definindo cor do texto do botão
+    font-size: 22px; Definindo tamanho da fonte do texto
+    font-weight: 800; Definindo a espessura fonte
+
+    Definindo margem na direita e na esquerda do botão.
     margin-left: 75px;
     margin-right: 75px;
 
-    text-align: center;  /*Centralizando o texto no botão - pode n ser necessário*/
-}
+    text-align: center;  Centralizando o texto no botão - pode n ser necessário
+} */
 
 /*Featured*/
 #featured
 {
-    margin-top: 15px; /*Abrindo uma margem entre os destaques e o botão*/
+    margin-top: 15px; /*Abrindo uma margem entre os destaques e o titulo*/
     display: flex;
     justify-content: center; /*Centralizando todos os elementos no centro da tela*/
     margin-bottom: 15px; /*Abrindo uma margem no fundo dele para futuros elementos*/
     gap: 35px;  /*Abrindo um espaço entre cada elemento*/
+    flex-wrap: wrap;
 }
 
 /*Featured Square*/
 .featuredSquare
 {
     display: flex; /*Definindo o formato de exibição para flexível*/
-    justify-content: center; /*Centralizando horizontalmente os elementos */
+    justify-content: flex-start; /*Centralizando horizontalmente os elementos */
     flex-direction: column;/*Com isto a cenrralização horizontal vira vertical. */
     text-align: center; /*Centralizando texto dentro do retangulo*/
     background-color: #ffe1cc; /*Definindo a cor de fundo*/
-    width: 15%; /*Definindo o tamanho dele*/
+    width: 15rem; /*Definindo o tamanho dele*/
+    height: 20rem;
+    gap: 10px;
     border-radius: 20px; /*Arredodamento do retangulo*/
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .featuredSquare img
 {
     /*Arredodando a parte de cima da foto, enquanto deixa a parte de baixo normal*/
     border-radius: 20px 20px 0px  0px;
+    width: 15rem;
   
 }
 
@@ -64,7 +83,7 @@
 {
     margin-top: 5px; /*Espaçamento em cima, para deixar mais espaço entre o texto e a borda da foto*/
     color: #d16210;
-    font-size: 20px;
+    font-size: 16px;
     font-weight:700;
 }
 
