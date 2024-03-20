@@ -2,8 +2,9 @@ import React from 'react';
 import Botao from "../button/Botao";
 import "../barraLinks/barraLinks.css";
 import "../../index.css";
-
+  
 function BarraLinks() {
+
   const barraStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -23,5 +24,6 @@ function BarraLinks() {
     </div>
   );
 }
+  
 
 export default BarraLinks;
