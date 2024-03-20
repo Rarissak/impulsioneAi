@@ -64,7 +64,7 @@ button, #headerSearch input
 
 
 /*===- Configuração de  botão selecionado -===*/
-.headerButtonSelected
+/* .headerButtonSelected
 {
     padding: .2rem .8rem;
     transition: .5s;
@@ -76,7 +76,7 @@ button, #headerSearch input
     line-height: 21.78px;
     letter-spacing: -1.5%;
     height: 30px;
-}
+} */
 
 /*===- Barra de Pesquisa -===*/
 

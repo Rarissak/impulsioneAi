@@ -15,18 +15,17 @@ function Header()
 
                 <div id="headerSiteName">
                     <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
-                    {/* <h1 id="headerSiteName"  className='centralizeItems'> 
-                    <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
-                    </h1> */}
                 </div>
 
                 <div id='align'>
                     
                     <button 
-                    className="headerScreenButtons, headerButtonSelected"
+                    id='headerHome'
+                    className="headerScreenButtons"
                     >Home</button>
 
                     <button 
+                    id='headerSobre'
                     className="headerScreenButtons"
                     >Sobre</button>
                     
@@ -50,7 +49,7 @@ function Header()
                     <button
                     id='headerParceiros'
                     className='centralizeItems, headerScreenButtons'> 
-                        <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon'/>
+                        <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon' id="headerIconParceiros"/>
                         <span>Área Parceiros</span> 
                     </button>
             
@@ -62,7 +61,8 @@ function Header()
                 style={{ 
                         width: '100%', // Largura da linha horizontal
                         height: '5px', // Espessura da linha horizontal
-                        backgroundColor: '#7900c3' // Cor de fundo da linha horizontal
+                        backgroundColor: '#7900c3', // Cor de fundo da linha horizontal
+                        margin: 0
                     }} />
 
             {/* <div id='headerCategory'>
@@ -103,7 +103,7 @@ function Header()
        
 
 
-      );
+    );
 }
 
 export default Header;
