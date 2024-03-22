@@ -30,9 +30,9 @@ function Home(){
         </div>
 
         <div id='boxInfos'>
-            <BoxInfo title={"NOSSO OBJETIVO"}></BoxInfo>
+            <BoxInfo id="tituloBloco" title={"NOSSO OBJETIVO"}></BoxInfo>
             <div>
-            <div id="boxInformations">                
+            <div className="boxInformations">                
                         <Informations icon={GrowIcon} 
                                     titulo={"Alavancar a carreira dos pequenos empreendedores"}
                                     texto={"Oferecemos uma plataforma que ajuda os pequenos e microempreendedores a aumentar sua visibilidade no mercado, alcançando mais clientes e impulsionando suas vendas."}
