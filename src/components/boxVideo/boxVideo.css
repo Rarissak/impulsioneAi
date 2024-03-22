@@ -6,6 +6,8 @@
     margin-top: 5em;
     margin-bottom: 5em;
     margin-left: 3em;
+
+    
     margin-right: 3em;
 }
 
@@ -21,7 +23,13 @@
 }
 
 #video {
-    width: 1349px; 
-    height: 350px;
+    /* width: 1349px;  */
+    width: 45rem;
+    /* height: 350px; */
+    height: 25rem;
     border-radius: 2em;
+}
+
+#boxInfoVideo {
+    width: 45%;
 }

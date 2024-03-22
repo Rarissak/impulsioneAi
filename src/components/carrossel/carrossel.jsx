@@ -14,8 +14,16 @@ import 'swiper/css/scrollbar';
 
 register();
 
-function Carrossel() {
+// function Carrossel(img1, img2, img3, img4) {
+    function Carrossel() {
     const [slidePerView, setSlidePerView] = useState(1)
+
+    // const data = [
+    //     {id: '1', image: img1},
+    //     {id: '2', image: img2},
+    //     {id: '3', image: img3},
+    //     {id: '4', image: img4},    
+    // ]
 
     const data = [
         {id: '1', image: 'https://img.freepik.com/fotos-gratis/arranjo-lindo-de-papel-de-parede-de-flores_23-2149057015.jpg'},

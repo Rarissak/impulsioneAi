@@ -8,13 +8,10 @@ import '../../index.css';
 function BoxInfo({title}) {
     return(
         <section>
-            <div id="titleBox">
-                <h1 className="title">{title}</h1>
+            <div id="titleBox" className='titleBoxLaranja titleBoxRoxo'>
+                <h1 className="title" id="titulo">{title}</h1>
             </div>
-
             <div id="divisor"></div>
-        
-            
         </section>
     )
 }
