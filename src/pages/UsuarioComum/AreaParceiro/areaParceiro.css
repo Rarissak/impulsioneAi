@@ -1,5 +1,30 @@
 /* CÓDIGO DO HEADER */
 
+/*===- Configuração de  botão selecionado -===*/
+.headerButtonSelected
+{
+    padding: .2rem .8rem;
+    transition: .5s;
+    background-color: #ff7d1e;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21.78px;
+    letter-spacing: -1.5%;
+    height: 30px;
+}
+
+#linkCadastro {
+    padding: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #FF8D3B;
+}
+
 #headerParceiros
 {
     padding: .2rem .8rem;
@@ -12,6 +37,7 @@
     line-height: 21.78px;
     letter-spacing: -1.5%;
     height: 30px;
+    border-radius: 20px;
 }
 
 #headerIconParceiros {
@@ -47,7 +73,7 @@
     margin-bottom: 2rem;
 }
 
-#infoBloco1 button {
+.buttonInfo {
     padding: 0.75rem;
     padding-left: 2rem;
     padding-right: 2rem;

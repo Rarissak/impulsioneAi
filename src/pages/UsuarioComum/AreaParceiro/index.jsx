@@ -16,6 +16,10 @@ import IconParceria from '../../../assets/iconParceria.svg';
 import IconSuporte from '../../../assets/iconSuporte.svg';
 import IconVerificacao from '../../../assets/verificacaoIcon.svg';
 
+
+
+import Produto from '../../../components/produto/produto';
+
 function AreaParceiro(){
     return (
         <>
@@ -24,6 +28,9 @@ function AreaParceiro(){
         
         <body>
             <div className='blocoRoxo'>
+
+
+                {/* <Produto></Produto> */}
 
                 <nav id="linksNavegacao">
                     <span className='teste'>VANTAGENS</span>
@@ -38,9 +45,15 @@ function AreaParceiro(){
                 <div id="infoBloco1">
                     <h1 className='title'>Dê um salto no seu negócio!</h1>
                     <p>Use nossa plataforma como uma forma de impulsionar ai, aqui, aonde você estiver!</p>
-                    <button>TORNE-SE UM PARCEIRO</button>
+                    <button className='botaoInfo' id='linkCadastro'>TORNE-SE UM PARCEIRO</button>
                 </div>
-                <Carrossel></Carrossel>
+                <Carrossel/>
+                {/* <Carrossel
+                    img1={'./Paisagem-1.jpg'}
+                    img2={'./Paisagem-1.jpg'}
+                    img3={'./Paisagem-1.jpg'}
+                    img4={'./Paisagem-1.jpg'}
+                /> */}
                 </section>
 
                 <section id="bloco2">
