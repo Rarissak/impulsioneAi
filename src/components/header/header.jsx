@@ -6,6 +6,9 @@ import SearchIconSvg from '../../assets/searchIcon.svg';
 import UserIconSvg from '../../assets/userIcon.svg';
 import LogoDescritivaIcon from '../../assets/logoDescritivaIcon.svg';
 
+import {Link} from "react-router-dom";
+
+
 function Header()
 {
     return (
@@ -15,19 +18,18 @@ function Header()
 
                 <div id="headerSiteName">
                     <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
-                    {/* <h1 id="headerSiteName"  className='centralizeItems'> 
-                    <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
-                    </h1> */}
                 </div>
 
                 <div id='align'>
                     
                     <button 
-                    className="headerScreenButtons, headerButtonSelected"
+                    id='headerHome'
+                    className="headerScreenLinks"
                     >Home</button>
 
                     <button 
-                    className="headerScreenButtons"
+                    id='headerSobre'
+                    className="headerScreenLinks"
                     >Sobre</button>
                     
                     <div
@@ -42,17 +44,18 @@ function Header()
                     
                     <button 
                     id='headerLogin'
-                    className='centralizeItems, headerScreenButtons'>
+                    className='centralizeItems, headerScreenLinks'>
                         <img src={UserIconSvg} alt="Icone, para informar login" className='headerIcon'/>
                         <span>Login</span>  
                     </button>
 
-                    <button
+                    <Link
                     id='headerParceiros'
-                    className='centralizeItems, headerScreenButtons'> 
-                        <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon'/>
+                    className='centralizeItems, headerScreenLinks'
+                    to='/areaParceiro'> 
+                        <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon' id="headerIconParceiros"/>
                         <span>Área Parceiros</span> 
-                    </button>
+                    </Link>
             
                 </div>
 
@@ -62,7 +65,8 @@ function Header()
                 style={{ 
                         width: '100%', // Largura da linha horizontal
                         height: '5px', // Espessura da linha horizontal
-                        backgroundColor: '#7900c3' // Cor de fundo da linha horizontal
+                        backgroundColor: '#7900c3', // Cor de fundo da linha horizontal
+                        margin: 0
                     }} />
 
             {/* <div id='headerCategory'>
@@ -103,7 +107,7 @@ function Header()
        
 
 
-      );
+    );
 }
 
 export default Header;

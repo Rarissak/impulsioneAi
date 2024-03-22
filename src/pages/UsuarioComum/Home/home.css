@@ -1,0 +1,51 @@
+#boxInformations {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#vantagens {
+    background-color: #F7EBFF;
+    color: #8A00DE;
+    padding: 1em;
+    text-align: center;
+}
+
+#vantagens p a {
+    text-decoration: none;
+}
+
+.carrossel {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:2em;
+    margin: 2.5em 5.4em 2.5em 5.4em;
+    align-items: center;
+}
+
+.carrossel p {
+    color: #FF7D1E;
+}
+
+#destaques {
+    margin: 2em;
+}
+
+#tituloDepoimentos {
+    background-color: #FF7D1E;
+    /* margin-top, margin-right, margin-bottom, e margin-left. */
+    margin: 0em 30em 1em 0em;
+    padding: 0.2em 0em 0.2em 10em;
+    color: #FFFFFF;
+    border-top-right-radius: 10em;
+    border-bottom-right-radius: 10em;
+}
+
+#depoimentos {
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 2em;
+}

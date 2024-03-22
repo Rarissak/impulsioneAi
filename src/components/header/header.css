@@ -36,8 +36,11 @@ button, #headerSearch input
 
 /*===- Todos os botões que redericionam para uma tela específica -===*/
 
-.headerScreenButtons
+
+
+.headerScreenLinks
 {
+    text-decoration: none;
     padding: .2rem .8rem;
     background-color: #ff7c1e00;
     color: #7900c3;
@@ -51,7 +54,7 @@ button, #headerSearch input
     cursor: pointer;
 }
 
-.headerScreenButtons:hover
+.headerScreenLinks:hover
 
 {
     transition: .4s;
@@ -64,7 +67,7 @@ button, #headerSearch input
 
 
 /*===- Configuração de  botão selecionado -===*/
-.headerButtonSelected
+/* .headerButtonSelected
 {
     padding: .2rem .8rem;
     transition: .5s;
@@ -76,7 +79,7 @@ button, #headerSearch input
     line-height: 21.78px;
     letter-spacing: -1.5%;
     height: 30px;
-}
+} */
 
 /*===- Barra de Pesquisa -===*/
 

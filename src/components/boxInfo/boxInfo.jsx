@@ -9,12 +9,9 @@ function BoxInfo({title}) {
     return(
         <section>
             <div id="titleBox">
-                <h1 className="title">{title}</h1>
+                <h1 className="title" id="titulo">{title}</h1>
             </div>
-
             <div id="divisor"></div>
-        
-            
         </section>
     )
 }
