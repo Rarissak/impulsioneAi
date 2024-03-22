@@ -6,6 +6,9 @@ import SearchIconSvg from '../../assets/searchIcon.svg';
 import UserIconSvg from '../../assets/userIcon.svg';
 import LogoDescritivaIcon from '../../assets/logoDescritivaIcon.svg';
 
+import {Link} from "react-router-dom";
+
+
 function Header()
 {
     return (
@@ -21,12 +24,12 @@ function Header()
                     
                     <button 
                     id='headerHome'
-                    className="headerScreenButtons"
+                    className="headerScreenLinks"
                     >Home</button>
 
                     <button 
                     id='headerSobre'
-                    className="headerScreenButtons"
+                    className="headerScreenLinks"
                     >Sobre</button>
                     
                     <div
@@ -41,17 +44,18 @@ function Header()
                     
                     <button 
                     id='headerLogin'
-                    className='centralizeItems, headerScreenButtons'>
+                    className='centralizeItems, headerScreenLinks'>
                         <img src={UserIconSvg} alt="Icone, para informar login" className='headerIcon'/>
                         <span>Login</span>  
                     </button>
 
-                    <button
+                    <Link
                     id='headerParceiros'
-                    className='centralizeItems, headerScreenButtons'> 
+                    className='centralizeItems, headerScreenLinks'
+                    to='/areaParceiro'> 
                         <img src={HandshakeIconSvg} alt="Icon da área de parceria, duas mãos se apertando." className='headerIcon' id="headerIconParceiros"/>
                         <span>Área Parceiros</span> 
-                    </button>
+                    </Link>
             
                 </div>
 
