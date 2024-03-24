@@ -1,7 +1,7 @@
 
 import React,{useState} from "react";
 import './login.css';
-import ModalForgetPassword, {ToggleModalChange} from "../changePassword/changePassword";
+import ModalForgetPassword, {ToggleModalForgot} from "../forgotPassword/forgotPassword";
 // Importando o icon do botão de fechar o modal.
 import iconModalClose from '../../assets/iconLoginModalClose.svg';
 
@@ -19,11 +19,16 @@ export function ToggleModal()
 function Login()
 {
 
+    // Mostrando O modal de esqueci a senha
+    const [mostrar, setMostrar] = useState(false);
+    // Ativando modal
     const handleComponentForgetPassword = () => {
-       ToggleModalChange();
+        setMostrar(true);
+       if (mostrar) {
+        setMostrar(false)
+       }
        
-        // Fechando o modal login...
-       // ToggleModal();
+       
     };
 
     return(
@@ -32,7 +37,7 @@ function Login()
              {/*Botão responsável por abrir o modal, Por a função ToggleModal no botão que for desajável mais tarde.*/}
            {/*  <button id="openModal" onClick={ToggleModal}>Abrir Modal</button>.*/}
              {/*Div responsável pela centralização do container do login e adição da cor do fundo*/}
-            <div id="loginCentralize" className="hide">
+            <div id="loginCentralize" className="hide" >
 
                  {/*Div que vai conter todos os elementos principais do login. Ex: inputs de email e senha*/}
                 <div id="loginContainer">
@@ -65,7 +70,7 @@ function Login()
                             <input type="password"/>
                             <span className="forgotPassword" onClick={handleComponentForgetPassword}>Esqueci minha senha</span> 
                         </div>
-                        { <ModalForgetPassword/>}
+                        { mostrar && <ModalForgetPassword/>}
 
                          {/*Botões de logar e ir para cadastro*/}
                         <div id="loginButtons">
