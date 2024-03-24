@@ -13,6 +13,17 @@ import instagramRoxo from '../../assets/instagramRoxo.svg'
 // import instagram from '../../assets/iconInstagram.svg'
 // import telegram from '../../assets/iconTelegram.svg'
 
+// Adicionando função de barramento de letras no input 
+function apenasNumeros(evt) {
+    // Obtém o código ASCII do caractere digitado
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    // Verifica se o caractere digitado é uma letra
+    if (charCode >= 65 && charCode <= 90 || charCode >= 97 && charCode <= 122) {
+        // Cancela o evento de digitação (não insere o caractere no campo)
+        evt.preventDefault();
+    }
+}
 
 function Form()
 {
@@ -31,8 +42,9 @@ function Form()
                             <span className="nameField">Nome Completo</span>
                             <input 
                                 type="text" 
-                                size={47} 
-                                required/>
+                                size={43} 
+                                required
+                               />
                         </div>
 
                         {/*DATA DE NASCIMENTO*/}
@@ -52,7 +64,8 @@ function Form()
                                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"  
                                 maxLength="14" 
                                 required
-                                size={24}/> 
+                                size={22}
+                                onKeyDown={apenasNumeros}/> 
                         </div>
                    
                         {/*MEI*/}
@@ -63,7 +76,8 @@ function Form()
                                     type="text"  
                                     pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}\/[0-9]{4}-[0-9]{2}" 
                                     maxLength="18"
-                                    size={25}/> 
+                                    size={23}
+                                    onKeyDown={apenasNumeros}/> 
                                     <span className="optional">Não é obrigatório</span>
                             </div>
                         </div>
@@ -89,7 +103,7 @@ function Form()
                         <input 
                         type="text"
                         required
-                        size={13.5}/>
+                        size={12}/>
                     </div>
 
                     {/*BAIRRO*/}
@@ -98,7 +112,7 @@ function Form()
                         <input 
                         type="text"
                         required
-                        size={13.5}/>
+                        size={12}/>
                     </div>
                     
                     {/*LOGADOURO*/}
@@ -107,7 +121,7 @@ function Form()
                         <input 
                         type="text"
                         required
-                        size={38}/>
+                        size={34}/>
                     </div>
 
                     {/*NÚMERO DA CASA OU APARTAMENTO*/}
@@ -116,7 +130,10 @@ function Form()
                         <input 
                         type="text"
                         required
-                        size={6}/>
+                        size={6}
+                        max={99999}
+                        min={0}/>
+                        
                     </div>
                 
                     
@@ -131,9 +148,10 @@ function Form()
                     <div className="fieldType1">
                         <span className="nameField">Senha</span>
                         <input 
-                        type="text"
+                        type="password"
                         required
-                        size={29}/>
+                        minLength={8}
+                        size={27}/>
                         {/*Orientação de preenchimento de senha*/}
                         <br></br>
                         <div id="passwordRequery">
@@ -149,9 +167,10 @@ function Form()
                     <div className="fieldType1">
                         <span className="nameField">Reescreva a Senha</span>
                         <input 
-                        type="text"
+                        type="password"
                         required
-                        size={30}
+                        minLength={8}
+                        size={27.5}
                         />
                     </div>
 
@@ -204,7 +223,7 @@ function Form()
                         <input 
                             type="text"
                             required
-                            size={32}/>
+                            size={30}/>
                     </div>
 
                     {/*SITE DO NEGÓCIO*/}
@@ -213,7 +232,7 @@ function Form()
                         <input 
                             type="text"
                             required
-                            size={27}/>
+                            size={24}/>
                     </div>
                 </fieldset>
 
