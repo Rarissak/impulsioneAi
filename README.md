@@ -12,7 +12,9 @@ Impulsione aí é uma plataforma web projetada para conectar empreendedores loca
 
 ## Funcionalidades Principais
 
-- **Conexão entre Empreendedores e Usuários:** Permitimos que empreendedores locais criem perfis e listem seus produtos ou serviços. Os usuários podem encontrar esses produtos ou serviços diretamente na plataforma e contatar o empreendimento através de suas informações de contato. 
+- **Conexão entre Empreendedores e Usuários:** Permitimos que empreendedores locais criem perfis e listem seus produtos ou serviços. Os usuários podem encontrar esses produtos ou serviços diretamente na plataforma e contatar o empreendimento através de suas informações de contato.
+
+- **Capacitação do Empreendedor:** O empreendedor parceiro, dentro do seu parfil na plataforma, poderá encontrar vídeos explicativos, retirados do Canal do Youtube do Sebrae, sobre o ramo de empreendedorismo e aprender mais pra se destacar mediante aos concorrentes que não estão no Impulsione aí. 
 
 - **Avaliações e Comentários:** Os usuários podem deixar avaliações e comentários sobre os produtos e serviços que adquiriram, ajudando outros usuários a tomar decisões informadas. Bem como, os empreendedores também poderão deixar depoimentos sobre seu uso na plataforma para encorajar outros empreendedores a ingressarem também na plataforma. 
 
@@ -30,10 +32,10 @@ Aceitamos contribuições de desenvolvedores interessados em melhorar a platafor
 
 Para executar o projeto localmente, siga estas etapas:
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/impulsione-ai.git`
-2. Instale as dependências: `npm install`
-3. Execute o servidor: `npm start`
-4. Acesse o aplicativo em seu navegador: `http://localhost:3000`
+1. Clone o repositório: `https://github.com/Rarissak/impulsioneAi.git`
+2. Instale as dependências: `npm install`, `npm install vite`
+3. Execute o servidor: `npm run dev`
+4. Acesse a plataforma em seu navegador: `http://localhost:3000`
 
 ## Equipe
 
