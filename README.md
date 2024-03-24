@@ -12,6 +12,8 @@ Impulsione aí é uma plataforma web projetada para conectar empreendedores loca
 
 ## Funcionalidades Principais
 
+- **Impulsionamento dos Perfis:** Através do plano de assinatura, o empreendedor poderá ter o seu perfil em destaque, nos anúncios do carrossel e nos destaques da home, em pesquisas do seu nicho bem como na área do parceiro.
+
 - **Conexão entre Empreendedores e Usuários:** Permitimos que empreendedores locais criem perfis e listem seus produtos ou serviços. Os usuários podem encontrar esses produtos ou serviços diretamente na plataforma e contatar o empreendimento através de suas informações de contato.
 
 - **Capacitação do Empreendedor:** O empreendedor parceiro, dentro do seu parfil na plataforma, poderá encontrar vídeos explicativos, retirados do Canal do Youtube do Sebrae, sobre o ramo de empreendedorismo e aprender mais pra se destacar mediante aos concorrentes que não estão no Impulsione aí. 
