@@ -1,0 +1,67 @@
+.footer {
+    background-color: #CE5700;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: end;
+    /* padding: 3.4em; */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 0.75rem;
+   
+  }
+
+  .logo {
+    width: 12rem;
+    margin-left: 80px;
+   
+  }
+
+  .footer-content {
+   
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .footer-content p {
+    margin-bottom: 0;
+  }
+  
+  #copyright {
+    font-size: 0.7em;
+    color:#FFC79E;
+    text-align: center;
+  }
+
+  .redes-links {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .redes-links_p-redes {
+    align-self: center;
+    padding-bottom: 1em;
+    font-size: 14px;
+  }
+  .redes-links_img-redes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+    gap: 1.5rem;
+  }
+
+  /* .redes-links_img-redes a {
+    display: inline-block;
+    margin-right: 1.2em; fiz assim pq o space-between não tava pegando por nada
+  } */
+
+  .redes-links_img-redes img {
+    width: 2rem;
+  } 
+
