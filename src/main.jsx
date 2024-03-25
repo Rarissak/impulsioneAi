@@ -6,6 +6,7 @@ import AreaParceiro from './pages/UsuarioComum/AreaParceiro/index.jsx';
 import Vitrine from './pages/UsuarioComum/Vitrine/index.jsx';
 import Home from './pages/UsuarioComum/Home/index.jsx';
 import Login from './components/login/login.jsx';
+import Form from './components/form/form.jsx';
 
 // Configurando o router
 import {
@@ -34,9 +35,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    {/* <RouterProvider router={router}></RouterProvider> */}
 
     {/* <AreaParceiro></AreaParceiro> */}
+    { <Form></Form> }
+    {/* {<Login></Login>} */}
 
     </React.StrictMode>,
 )

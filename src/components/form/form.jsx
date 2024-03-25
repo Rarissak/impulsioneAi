@@ -1,9 +1,12 @@
 import React from "react";
 import './form.css';
+import axios from 'axios';
+import { useState } from "react";
 import facebook from "../../assets/iconFacebook.svg";
 import instagram from "../../assets/iconInstagram.svg";
-import facebookRoxo from '../../assets/facebookRoxo.svg'
-import instagramRoxo from '../../assets/instagramRoxo.svg'
+import facebookRoxo from '../../assets/facebookRoxo.svg';
+import instagramRoxo from '../../assets/instagramRoxo.svg';
+
 
 // import LogoBranca from '../../assets/Logo-branca.svg'
 // import youtube from '../../assets/iconYoutube.svg'
@@ -15,14 +18,85 @@ import instagramRoxo from '../../assets/instagramRoxo.svg'
 
 
 function Form()
+
 {
+
+    const [dados, setDadosEmpreendedor] = useState({
+        nomeCompleto: '',
+        dataNascimento: '',
+        cpf: '',
+        mei: '',
+        senha: '',
+        nomeEmpreendimento: '',
+        site: '',
+        telefone: '',
+        email: '',
+        planoEscolhido: '',
+        instagram: '',
+        facebook: '',
+        nicho: '',
+        modalidade: ''
+    });
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const resposta = await axios.post('http://localhost:8080/empreendedores', dados);
+            console.log(resposta.data);
+            
+           handleSubmitEndereco();
+           alert("Cadastro realizado com sucesso!");
+           window.location.href='./login';
+        } catch (erro) {
+            console.error('Ocorreu um erro ao enviar o formulário:', erro);
+            alert("Desculpe, ocorreu um erro no cadastro :(  Tente novamente mais tarde.");
+        }
+    };
+
+    const handleChange = (event) => {
+        setDadosEmpreendedor({ ...dados, [event.target.name]: event.target.value });
+    };
+
+
+
+    const [dadosEndereco, setDadosEndereco] = useState({
+        uf: '',
+        cidade: '',
+        bairro: '',
+        logadouro: '',
+        numero: '',
+        cpfEmpreendedor: localStorage.getItem('cpf')
+    });
+
+    const handleSubmitEndereco = async () => {
+        event.preventDefault();
+
+        try {
+            const resposta = await axios.post('http://localhost:8080/endereco', dadosEndereco);
+            console.log(resposta.data);
+            
+        } catch (erro) {
+            console.error('Ocorreu um erro ao enviar o formulário:', erro);
+        }
+    };
+
+    const handleChangeEndereco = (event) => {
+        setDadosEndereco({ ...dadosEndereco, [event.target.name]: event.target.value });
+    };
+
+
+
+
+
+
+
     return(
         
         // Centraliza o formulário no centro da tela.
       <div id="form"> 
 
         {/*Contém todo o formulário e seus campos*/}
-        <div id="formContainer">
+        <form id="formContainer" onSubmit={handleSubmit}>
 
             {/*Campo das informações pessoais*/}
             <fieldset className = "fieldSetConfig">
@@ -31,17 +105,23 @@ function Form()
                             <span className="nameField">Nome Completo</span>
                             <input 
                                 type="text" 
-                                size={47} 
-                                required/>
+                                size={47}
+                                required
+                                name="nomeCompleto"
+                                value={dados.nomeCompleto}
+                                onChange={handleChange}/>
                         </div>
 
                         {/*DATA DE NASCIMENTO*/}
                         <div className="fieldType1">
                             <span className="nameField">Data de Nascimento</span>
                             <input 
-                             type="date"
-                             size={6}
-                             required/>
+                                type="date"
+                                size={6}
+                                required
+                                name="dataNascimento"
+                                value={dados.dataNascimento}
+                                onChange={handleChange}/>
                         </div> 
 
                         {/*CPF*/}
@@ -52,7 +132,11 @@ function Form()
                                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"  
                                 maxLength="14" 
                                 required
-                                size={24}/> 
+                                size={24}
+                                name="cpf"
+                                value={dados.cpf}
+                                onBlur={localStorage.setItem('cpf', dados.cpf)}
+                                onChange={handleChange}/> 
                         </div>
                    
                         {/*MEI*/}
@@ -63,7 +147,10 @@ function Form()
                                     type="text"  
                                     pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}\/[0-9]{4}-[0-9]{2}" 
                                     maxLength="18"
-                                    size={25}/> 
+                                    size={25}
+                                    name="mei"
+                                    value={dados.mei}
+                                    onChange={handleChange}/> 
                                     <span className="optional">Não é obrigatório</span>
                             </div>
                         </div>
@@ -79,6 +166,9 @@ function Form()
                         <span className="nameField">UF</span>
                         <input 
                         type="text"
+                        name="uf"
+                        value={dadosEndereco.uf}
+                        onChange={handleChangeEndereco}
                         required
                         size={4}/>
                     </div>
@@ -88,6 +178,9 @@ function Form()
                         <span className="nameField">Cidade</span>
                         <input 
                         type="text"
+                        name="cidade"
+                        value={dadosEndereco.cidade}
+                        onChange={handleChangeEndereco}
                         required
                         size={13.5}/>
                     </div>
@@ -97,6 +190,9 @@ function Form()
                         <span className="nameField">Bairro</span>
                         <input 
                         type="text"
+                        name="bairro"
+                        value={dadosEndereco.bairro}
+                        onChange={handleChangeEndereco}
                         required
                         size={13.5}/>
                     </div>
@@ -106,6 +202,9 @@ function Form()
                         <span className="nameField">Logadouro</span>
                         <input 
                         type="text"
+                        name="logadouro"
+                        value={dadosEndereco.logadouro}
+                        onChange={handleChangeEndereco}
                         required
                         size={38}/>
                     </div>
@@ -115,6 +214,9 @@ function Form()
                         <span className="nameField">N°</span>
                         <input 
                         type="text"
+                        name="numero"
+                        value={dadosEndereco.numero}
+                        onChange={handleChangeEndereco}
                         required
                         size={6}/>
                     </div>
@@ -133,6 +235,9 @@ function Form()
                         <input 
                         type="text"
                         required
+                        name="senha"
+                        value={dados.senha}
+                        onChange={handleChange}
                         size={29}/>
                         {/*Orientação de preenchimento de senha*/}
                         <br></br>
@@ -150,7 +255,7 @@ function Form()
                         <span className="nameField">Reescreva a Senha</span>
                         <input 
                         type="text"
-                        required
+                        // required
                         size={30}
                         />
                     </div>
@@ -175,6 +280,9 @@ function Form()
                         <input 
                         type="text"
                         required
+                        name="nicho"
+                        value={dados.nicho}
+                        onChange={handleChange}
                         size={10}/>
                     </div>
                     
@@ -204,6 +312,9 @@ function Form()
                         <input 
                             type="text"
                             required
+                            name="nomeEmpreendimento"
+                            value={dados.nomeEmpreendimento}
+                            onChange={handleChange}
                             size={32}/>
                     </div>
 
@@ -213,6 +324,9 @@ function Form()
                         <input 
                             type="text"
                             required
+                            name="site"
+                            value={dados.site}
+                            onChange={handleChange}
                             size={27}/>
                     </div>
                 </fieldset>
@@ -220,7 +334,7 @@ function Form()
                 {/*PLANO ESCOLHIDO*/}
                 <div id="selectField">
                     <label htmlFor="membership">Plano Escolhido</label>
-                    <select id="membership" required>
+                    <select id="membership" /*required*/>
                         <option value="">Selecione</option>
                         <option value="bronze">Bronze</option>
                         <option value="silver">Silver</option>
@@ -241,6 +355,9 @@ function Form()
                     <input 
                         type="text"
                         required
+                        name="telefone"
+                        value={dados.telefone}
+                        onChange={handleChange}
                         size={17}/>
                 </div>
 
@@ -250,6 +367,9 @@ function Form()
                     <input 
                         type="text"
                         required
+                        name="email"
+                        value={dados.email}
+                        onChange={handleChange}
                         size={42.5}/>
                 </div>
 
@@ -259,6 +379,9 @@ function Form()
                     <input 
                         type="text"
                         required
+                        name="instagram"
+                        value={dados.instagram}
+                        onChange={handleChange}
                         size={66}/>
                 </div>
 
@@ -268,13 +391,16 @@ function Form()
                     <input 
                         type="text"
                         required
+                        name="facebook"
+                        value={dados.facebook}
+                        onChange={handleChange}
                         size={66}/>
                 </div>
             </fieldset>
         
-         
-        </div>
-
+            <input type="submit" value="Enviar"/>
+        </form>
+        
       </div>
 
     );
