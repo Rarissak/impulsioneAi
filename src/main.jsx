@@ -2,9 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-import Login from './pages/UsuarioComum/Login/index.jsx';
 import AreaParceiro from './pages/UsuarioComum/AreaParceiro/index.jsx';
 import Vitrine from './pages/UsuarioComum/Vitrine/index.jsx';
+import Home from './pages/UsuarioComum/Home/index.jsx';
+import Login from './components/login/login.jsx';
 
 // Configurando o router
 import {
@@ -22,7 +23,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Vitrine></Vitrine>
+    element: <Home></Home>
   },
   {
     path: "areaParceiro",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path: "vitrine",
     elements: <Vitrine></Vitrine>,
   },
+  {
+    path: "login",
+    elements: <Login></Login>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -40,6 +45,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     {/* <AreaParceiro></AreaParceiro> */}
 
-    
-  </React.StrictMode>,
+    </React.StrictMode>,
 )

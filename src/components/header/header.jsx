@@ -22,10 +22,11 @@ function Header()
 
                 <div id='align'>
                     
-                    <button 
+                    <Link 
                     id='headerHome'
                     className="headerScreenLinks"
-                    >Home</button>
+                    to='/'
+                    >Home</Link>
 
                     <button 
                     id='headerSobre'
@@ -42,12 +43,15 @@ function Header()
                         <img src={SearchIconSvg} alt="Icone de Lupa, com o sentido de buscar informações" />
                     </div>
                     
-                    <button 
+                    {/* Esse link está com problemas */}
+                    <Link 
                     id='headerLogin'
-                    className='centralizeItems, headerScreenLinks'>
+                    className='centralizeItems, headerScreenLinks'
+                    to='/login'>
                         <img src={UserIconSvg} alt="Icone, para informar login" className='headerIcon'/>
                         <span>Login</span>  
-                    </button>
+                    </Link>
+
 
                     <Link
                     id='headerParceiros'
