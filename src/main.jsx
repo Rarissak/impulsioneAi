@@ -8,9 +8,16 @@ import Vitrine from './pages/UsuarioComum/Vitrine/index.jsx';
 
 // Configurando o router
 import {
-  createBrowserRouter, RouterProvider
+  createBrowserRouter, RouterProvider, Route, Routes
 } from 'react-router-dom'
 
+
+<Router>
+  <Routes>
+    <Route path='/vitrine' Component={Vitrine} />
+    <Route path='/areaParceiro' Component={AreaParceiro} />
+  </Routes>
+</Router>
 // Aqui a gente coloca todas as pages que vão ter
 const router = createBrowserRouter([
   {
