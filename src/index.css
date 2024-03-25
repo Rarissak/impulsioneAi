@@ -30,3 +30,33 @@ body {
     /* margin-top: -40px;
     z-index: 1; */
 }
+
+#barraLinks {
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-family: "Baloo 2", sans-serif;
+    justify-content: center;
+}
+
+#barraLinks button{
+    font-family: "Baloo 2", sans-serif !important;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    scale: 1;
+}
+
+#fundoLaranja {
+    background-color: #FFA15D;
+}
+
+#fundoRoxoClaro {
+    background-color: #CC78FF;
+}
