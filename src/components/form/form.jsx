@@ -47,10 +47,9 @@ function Form()
             localStorage.setItem('cpf', dados.cpf);
             localStorage.setItem('email', dados.email);
 
-            handleSubmitEndereco();
-            handleSubmitEmail();
-           
-        
+            setTimeout(handleSubmitEndereco, 2000);
+            setTimeout(handleSubmitEmail, 5000);
+
            alert("Cadastro realizado com sucesso!");
            window.location.href='./login';
         } catch (erro) {
