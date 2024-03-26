@@ -15,9 +15,16 @@
 }
 
  */
-#itemBarra:hover
+.itemBarra:hover
 {
     transition: .35s !important;
     background-color: #ff6a00 !important;
+    scale: 1.02 !important;
+}
+
+.itemBarraRoxo:hover
+{
+    transition: .35s !important;
+    background-color: #7800c3 !important;
     scale: 1.02 !important;
 }

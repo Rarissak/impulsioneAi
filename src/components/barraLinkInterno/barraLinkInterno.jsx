@@ -12,7 +12,7 @@ function BarraLinkInterno({ id, name, idElemento }) {
   };
 
   return (
-    <button id={id} onClick={scrollToTopic}>
+    <button className='itemBarraRoxo' id={id} onClick={scrollToTopic}>
       {name}
     </button>
   );

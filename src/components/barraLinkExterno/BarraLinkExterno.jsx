@@ -9,7 +9,7 @@ function BarraLinkExterno({id, name, link}) {
       <>
         <Link
         to={link}>
-          <button id={id}>{name}</button>
+          <button className='itemBarra' id={id}>{name}</button>
         </Link>
       </>
     );

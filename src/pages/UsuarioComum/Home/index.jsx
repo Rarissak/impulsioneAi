@@ -1,7 +1,7 @@
-import './home.css'
-import Carrossel from '../../../components/carrossel/carrossel.jsx'
-import Header from '../../../components/header/header.jsx'
-import BarraLinkExterno from '../../../components/barraLinkExterno/BarraLinkExterno.jsx'
+import './home.css';
+import Carrossel from '../../../components/carrossel/carrossel.jsx';
+import Header from '../../../components/header/header.jsx';
+import BarraLinkExterno from '../../../components/barraLinkExterno/barraLinkExterno.jsx';
 import Footer from '../../../components/footer/footer.jsx'
 import BoxInfo from '../../../components/boxInfo/boxInfo.jsx'
 import GrowIcon from '../../../assets/growIcon.svg';

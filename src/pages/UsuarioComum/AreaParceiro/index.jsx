@@ -10,6 +10,7 @@ import BarraLinkInterno from '../../../components/barraLinkInterno/barraLinkInte
 import BoxInfo from '../../../components/boxInfo/boxInfo';
 import BoxVideo from '../../../components/boxVideo/boxVideo';
 import Informations from '../../../components/informations/informations';
+import BarraLinkExterno from '../../../components/barraLinkExterno/barraLinkExterno';
 
 import IconAlcance from '../../../assets/iconAlcance.svg';
 import IconParceria from '../../../assets/iconParceria.svg';
@@ -38,10 +39,12 @@ function AreaParceiro(){
         <body>
             <div className='blocoRoxo'>
                 <nav id='barraLinks'>
-                    <BarraLinkInterno id='fundoRoxoClaro' name={'VANTAGENS'} idElemento={'#bloco2'}></BarraLinkInterno>
-                    <BarraLinkInterno id='fundoRoxoClaro' name={'PARCEIROS'} idElemento={'#bloco3'}></BarraLinkInterno>
-                    <BarraLinkInterno id='fundoRoxoClaro' name={'SEBRAE'} idElemento={'#bloco4'}></BarraLinkInterno>
-                    <BarraLinkInterno id='fundoRoxoClaro' name={'PLANOS'} idElemento={'#bloco5'}></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'VANTAGENS'} idElemento='bloco2'></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'PARCEIROS'} idElemento='bloco3'></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'SEBRAE'} idElemento='bloco4'></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'PLANOS'} idElemento= 'bloco5'></BarraLinkInterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'CADASTRE-SE'} link={' '}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'LOGIN'} link={' '}></BarraLinkExterno>
                 </nav>
 
                 <section id="bloco1">
