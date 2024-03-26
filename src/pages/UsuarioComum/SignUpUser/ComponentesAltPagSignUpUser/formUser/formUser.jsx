@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import './formUser.css';
+import axios from 'axios';
 
  /*Função de validação de formatação do contéudo do input CPF
  Vai verificar se o cpf segue o padrão: 123.123.123-12 ou vai ter apenas 11 numeros, tem retorno boleano*/
@@ -70,6 +71,73 @@ function FormUser()
         setEmail(event.target.value);
     };
 
+
+
+
+    const [dados, setDados] = useState({
+        nome: '',
+        dataNascimento: '',
+        cpf: '',
+        senha: '',
+        email: ''
+    });
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const resposta = await axios.post('http://localhost:8080/usuarios', dados);
+            console.log(resposta.data);
+
+            localStorage.setItem('email', dados.email);
+            setTimeout(handleSubmitEmail,  5000);
+        
+            CadastroRealizado();
+            window.location.href='./login';
+        } catch (erro) {
+            console.error('Ocorreu um erro ao enviar o formulário:', erro);
+            alert("Desculpe, ocorreu um erro no cadastro :(  Tente novamente mais tarde.");
+        }
+    };
+
+    const handleChange = (event) => {
+        setDados({ ...dados, [event.target.name]: event.target.value });
+    };
+
+    const [dadosEmail, setDadosEmail] = useState({
+        ownerRef: "Suporte",
+        emailFrom: "impulsioneai@gmail.com",
+        emailTo: localStorage.getItem('email'),
+        subject: "Bem-vindo (a) ao ImpulsioneAI",
+        text: "Bem-vindo(a) ao ImpulsioneAi! Estamos muito felizes em tê-lo(a) conosco! A nossa plataforma foi criada para lhe ajudar na divulgação do seu trabalho. Qualquer dúvida é só entrar em contato!"
+    });
+
+    const handleSubmitEmail = async () => {
+        
+
+        try {
+            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            console.log(resposta.data);
+            
+        } catch (erro) {
+            console.error('Ocorreu um erro ao enviar o e-mail:', erro);
+        }
+    };
+
+    const handleChangeEmail = (event) => {
+        setDadosEmail({ ...dadosEmail, [event.target.name]: event.target.value });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
     return(
         
        <div>
@@ -78,11 +146,11 @@ function FormUser()
             {/*Centraliza o formulário no centro da tela.*/}
             <div id="form"> 
             
-                <div id="formTitle">
+                {/* <div id="formTitle">
                     <span>Cadastro</span>
-                </div>
+                </div> */}
                 {/*Contém todo o formulário e seus campos*/}
-                <form id="formContainer" onSubmit={CadastroRealizado}>
+                <form id="formContainer" onSubmit={handleSubmit}>
 
                 {/*Campo das informações pessoais*/}
                 <fieldset className = "fieldSetConfig">
@@ -91,7 +159,10 @@ function FormUser()
                                 <span className="nameField">Nome Completo</span>
                                 <input 
                                     type="text" 
-                                    size={43} 
+                                    size={43}
+                                    name="nome"
+                                    value={dados.nome}
+                                    onChange={handleChange}  
                                     required/>
                             </div>
 
@@ -101,7 +172,10 @@ function FormUser()
                                 <input 
                                 type="date"
                                 size={6}
-                                required/>
+                                required
+                                name="dataNascimento"
+                                value={dados.dataNascimento}
+                                onChange={handleChange}/>
                             </div> 
 
                             {/*CPF*/}
@@ -114,8 +188,9 @@ function FormUser()
                                             pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$"   
                                             maxLength="14" 
                                             required
-                                            value={cpf}
-                                            onChange={handleCpfChange}
+                                            name="cpf"
+                                            value={dados.cpf}
+                                            onChange={handleChange}
                                             size={15}
                                             placeholder="123.123.123-12"
                                             onKeyDown={apenasNumeros}/> 
@@ -136,8 +211,9 @@ function FormUser()
                                         type="email"
                                         required
                                         size={29}
-                                        value={email}
-                                        onChange={handleEmailChange}/>
+                                        name="email"
+                                        value={dados.email}
+                                        onChange={handleChange}/>
 
                                     {/*Mensagem de error posicionada para aparecer...*/}
                                     <span className="invalidInput">
