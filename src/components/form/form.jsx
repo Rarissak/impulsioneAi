@@ -2,19 +2,8 @@ import React from "react";
 import './form.css';
 import axios from 'axios';
 import { useState } from "react";
-import facebook from "../../assets/iconFacebook.svg";
-import instagram from "../../assets/iconInstagram.svg";
 import facebookRoxo from '../../assets/facebookRoxo.svg';
 import instagramRoxo from '../../assets/instagramRoxo.svg';
-
-
-// import LogoBranca from '../../assets/Logo-branca.svg'
-// import youtube from '../../assets/iconYoutube.svg'
-// import twitter from '../../assets/iconTwitter.svg'
-// import linkedin from '../../assets/iconLinkedin.svg'
-// import facebook from '../../assets/iconFacebook.svg'
-// import instagram from '../../assets/iconInstagram.svg'
-// import telegram from '../../assets/iconTelegram.svg'
 
 
 function Form()
@@ -83,10 +72,6 @@ function Form()
     const handleChangeEndereco = (event) => {
         setDadosEndereco({ ...dadosEndereco, [event.target.name]: event.target.value });
     };
-
-
-
-
 
 
 

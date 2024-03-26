@@ -11,6 +11,7 @@ import Home from './pages/UsuarioComum/Home/index.jsx';
 import Form from './components/form/form.jsx';
 // import Login from './components/login/login.jsx';
 import Login from './pages/UsuarioComum/login/login.jsx';
+import Header from './components/header/header.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' Component={Home} />
         <Route path='/login' Component={Login} />
         <Route path='/cadastroParceiro' Component={Form} />
+        <Route paht='/mrioneriuv' Component={Header} />
       </Routes>
     </Router>
   );
@@ -51,6 +53,8 @@ function App() {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App></App>
+    {/* <Header></Header>
+    <AreaParceiro></AreaParceiro> */}
     {/* <RouterProvider router={router}></RouterProvider> */}
 
     {/* <AreaParceiro></AreaParceiro> */}
