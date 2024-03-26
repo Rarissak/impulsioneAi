@@ -28,7 +28,7 @@ function Home(){
         <Header></Header>
 
         <nav id='barraLinks'>
-            <BarraLinkExterno id='fundoLaranja' name={'GATRONOMIA'} link={''}></BarraLinkExterno>
+            <BarraLinkExterno id='fundoLaranja' name={'GASTRONOMIA'} link={''}></BarraLinkExterno>
             <BarraLinkExterno id='fundoLaranja' name={'MODA'} link={''}></BarraLinkExterno>
             <BarraLinkExterno id='fundoLaranja' name={'ARTESANATO'} link={''}></BarraLinkExterno>
             <BarraLinkExterno id='fundoLaranja' name={'TECNOLOGIA'} link={''}></BarraLinkExterno>

@@ -12,8 +12,11 @@ import Produto from '../../../components/produto/produto';
 import Trufa from './image 1.jpg';
 import SendMensage from '../../../assets/sendMensageIcon.svg';
 import HeartLine from '../../../assets/heratLineIcon.svg';
+import FacebookRoxo from '../../../assets/facebookRoxo.svg';
+import InstagramRoxo from '../../../assets/instagramRoxo.svg';
 import Favoritar from '../../../utils/favoritar';
-
+import CopiarTexto from '../../../utils/copiarTexto';
+import UserIcon from '../../../assets/userIcon.svg';
 
 //Imagens do carrossel
 import Artesanado from '../../../assets/artesanato.png'
@@ -32,7 +35,7 @@ function Vitrine(){
             <div className='blocoRoxo'>
 
                 <nav id='barraLinks'>
-                    <BarraLinkExterno id='fundoRoxoClaro' name={'GATRONOMIA'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'GASTRONOMIA'} link={''}></BarraLinkExterno>
                     <BarraLinkExterno id='fundoRoxoClaro' name={'MODA'} link={''}></BarraLinkExterno>
                     <BarraLinkExterno id='fundoRoxoClaro' name={'ARTESANATO'} link={''}></BarraLinkExterno>
                     <BarraLinkExterno id='fundoRoxoClaro' name={'TECNOLOGIA'} link={''}></BarraLinkExterno>
@@ -115,7 +118,7 @@ function Vitrine(){
 
             <section id="bloco3">
                 <BoxInfo title={"Avaliações"} idBox={'titleBoxLaranja'} idDivisor={'divisorLaranja'}></BoxInfo>
-                <div className='teste' id="boxLaranja">
+                <div className='avaliacoes' id="boxLaranja">
                     <div className='boxAvaliacoes'>
                         <div className='caixaAvaliacao'>
                             <h3>Keylane Cardoso</h3>
@@ -134,14 +137,67 @@ function Vitrine(){
                             <p>Fusce nibh nibh, scelerisque vitae libero in, fermentum condimentum ligula. Nullam lobortis ullamcorper sapien, quis euismod tellus porta non.</p>
                         </div>
                     </div>
-                    <div id='inputAvaliacao'>
+                    <form id='inputAvaliacao'>
                         <input type='text'
                                 placeholder="Insira sua avaliação"
                                 placeholderTextColor="#8b9cb5"
                                 maxLength={100}>        
                         </input>
-                        <img src={SendMensage} alt='icon de enviar mensagem'></img>
+                        <button type="submit">
+                            <img src={SendMensage} alt='icon de enviar mensagem' />
+                        </button>                    
+                    </form>
+                </div>
+            </section>
+            <section id='bloco4'>
+                <div id='conteudoBloco'>
+                    <h1 className='title' id='tituloBloco4'>INFORMAÇÕES</h1>
+                    <div id='colunas'>
+                        <div className='coluna' id='fotoNome'>
+                            <img id='fotoPerfil' src={UserIcon} alt='Iconde de perfil'/>
+                            <div id='fotoTexto'>
+                                <h1>Trusfas do Sim</h1>
+                                <div id='colunaTexto'>
+                                    <h5>Por:</h5>
+                                    <h4>Rarissa</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className='coluna'>
+                            <div>
+                                <h2>MODALIDADE DO SERVIÇO</h2>
+                                <h4>Presencial</h4>
+                            </div>
+                            <h3>Recife e Região Metropolitana</h3>
+                        </div>
+                        <div className='coluna'>
+                            <div className='contatos'>
+                                <h4>EMAIL DE CONTATO</h4>
+                                <div className='contato'>
+                                    <CopiarTexto texto='atrufasdosism@gmail.com'/>
+                                    <p>atrufasdosism@gmail.com</p>
+                                </div>
+                            </div>
+                            <div className='contatos'>
+                                <h4>NÚMERO DE CONTATO</h4>
+                                <div className='contato'>
+                                    <CopiarTexto texto='+55 81 4002-8922'/>
+                                    <p>+55 81 4002-8922</p>
+                                </div>
+                            </div>
+                            <a className='redeSocial' href='https://www.instagram.com/trufasdosim_/' target="_blank">
+                                <img src={InstagramRoxo} alt='icon do instagram'/>
+                                <p>Perfil Do Instagram</p>
+                            </a>
+                            <a className='redeSocial' href='https://www.instagram.com/trufasdosim_/' target="_blank">
+                                <img src={FacebookRoxo} alt='icon do facebook'/>
+                                <p>Perfil Do Facebook</p>
+                            </a>
+                        </div>
                     </div>
+                    
+
                 </div>
             </section>
         </body>
