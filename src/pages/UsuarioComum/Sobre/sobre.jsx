@@ -29,7 +29,7 @@ function Sobre() {
       <Header />
 
       <nav id='barraLinks'>
-        <BarraLinkExterno id='fundoLaranja' name={'GATRONOMIA'} link={''}></BarraLinkExterno>
+        <BarraLinkExterno id='fundoLaranja' name={'GASTRONOMIA'} link={''}></BarraLinkExterno>
         <BarraLinkExterno id='fundoLaranja' name={'MODA'} link={''}></BarraLinkExterno>
         <BarraLinkExterno id='fundoLaranja' name={'ARTESANATO'} link={''}></BarraLinkExterno>
         <BarraLinkExterno id='fundoLaranja' name={'TECNOLOGIA'} link={''}></BarraLinkExterno>
@@ -54,6 +54,7 @@ function Sobre() {
         <div className='carrossel_texto'>
           <p>Uma plataforma que busca criar o ambiente perfeito para impulsionar seu negócio aí onde você está. <br /><strong>Isso é o que nós somos!</strong></p>
           <img src={LogoColorida} alt="Logo" />
+          <p id='fraseEfeito'>Dê um salto em seu negócio</p>
         </div>
       </div>
 
@@ -83,7 +84,6 @@ function Sobre() {
                   <p>Buscar constantemente por novas oportunidades de inovação e aprimoramento da plataforma.</p>
                 </div>
               </div>
-
               <img src={Pilares} alt="Pilares" />
             </div>
           </div>

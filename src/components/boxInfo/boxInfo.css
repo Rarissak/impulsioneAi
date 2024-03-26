@@ -9,6 +9,7 @@
 }
 #titleBoxLaranja{ background-color: #FFE1CC; }
 #titleBoxRoxo{ background-color: #8A00DE; }
+#titleBoxBranco{ background-color: #ffffff; }
 
 /*H1 do Titulo do Box e suas variações*/
 .titleBox h1{ 
@@ -16,6 +17,7 @@
 }
 #titleBoxLaranja h1{ color: #8A00DE !important; }
 #titleBoxRoxo h1{ color: #FFC79E !important; }
+#titleBoxBranco h1{ color: #FF7D1E !important; }
 
 /*Divisor e suas variações*/
 .divisor {
@@ -25,6 +27,8 @@
 }
 #divisorRoxo { background-color: #8A00DE; }
 #divisorLaranja { background-color: #FFE1CC; }
+#divisorBranco { background-color: #ffffff; }
+
 
 /* #boxPrincipal {
     background-color: #8A00DE;
