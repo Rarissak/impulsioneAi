@@ -43,8 +43,14 @@ function Form()
         try {
             const resposta = await axios.post('http://localhost:8080/empreendedores', dados);
             console.log(resposta.data);
-            
-           handleSubmitEndereco();
+
+            localStorage.setItem('cpf', dados.cpf);
+            localStorage.setItem('email', dados.email);
+
+            handleSubmitEndereco();
+            handleSubmitEmail();
+           
+        
            alert("Cadastro realizado com sucesso!");
            window.location.href='./login';
         } catch (erro) {
@@ -85,9 +91,29 @@ function Form()
     };
 
 
+    const [dadosEmail, setDadosEmail] = useState({
+        ownerRef: "Suporte",
+        emailFrom: "impulsioneai@gmail.com",
+        emailTo: localStorage.getItem('email'),
+        subject: "Bem-vindo (a) ao ImpulsioneAI",
+        text: "Bem-vindo(a) ao ImpulsioneAi! Estamos muito felizes em tê-lo(a) conosco! A nossa plataforma foi criada para lhe ajudar na divulgação do seu trabalho. Qualquer dúvida é só entrar em contato!"
+    });
 
+    const handleSubmitEmail = async () => {
+        event.preventDefault();
 
+        try {
+            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            console.log(resposta.data);
+            
+        } catch (erro) {
+            console.error('Ocorreu um erro ao enviar o e-mail:', erro);
+        }
+    };
 
+    const handleChangeEmail = (event) => {
+        setDadosEmail({ ...dadosEmail, [event.target.name]: event.target.value });
+    };
 
 
     return(
