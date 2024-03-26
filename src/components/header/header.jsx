@@ -31,10 +31,11 @@ function Header()
                     to='/'
                     >Home</Link>
 
-                    <button 
+                    <Link 
                     id='headerSobre'
                     className="headerScreenLinks"
-                    >Sobre</button>
+                    to='/sobre'
+                    >Sobre</Link>
                     
                     <div
                     className='centralizeItems' id="headerSearch">
