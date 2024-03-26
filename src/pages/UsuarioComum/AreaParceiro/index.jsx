@@ -6,7 +6,7 @@ import Header from '../../../components/header/header';
 import Featured from '../../../components/featured/featured';
 import Footer from '../../../components/footer/footer';
 import Carrossel from '../../../components/carrossel/carrossel';
-import BarraLinks from '../../../components/barraLinks/BarraLinks';
+import BarraLinkInterno from '../../../components/barraLinkInterno/barraLinkInterno';
 import BoxInfo from '../../../components/boxInfo/boxInfo';
 import BoxVideo from '../../../components/boxVideo/boxVideo';
 import Informations from '../../../components/informations/informations';
@@ -16,29 +16,32 @@ import IconParceria from '../../../assets/iconParceria.svg';
 import IconSuporte from '../../../assets/iconSuporte.svg';
 import IconVerificacao from '../../../assets/verificacaoIcon.svg';
 
+//Imagens do carrossel
+import Artesanado from '../../../assets/artesanato.png'
+import Educacao from '../../../assets/educacaoAula.png'
+import Gastronomia from '../../../assets/gastronomiaTrufa.png'
+import Saude01 from '../../../assets/saudeFisio.png'
+import Saude02 from '../../../assets/saudeEstetica.png'
+import Tecnologia from '../../../assets/tecnologia.png'
+import Propaganda from '../../../assets/propagandaImpulsioneAi.png'
+    
 
 
-import Produto from '../../../components/produto/produto';
+// import Produto from '../../../components/produto/produto';
 
 function AreaParceiro(){
+
     return (
         <>
         <Header></Header>
         
-        
         <body>
             <div className='blocoRoxo'>
-
-
-                {/* <Produto></Produto> */}
-
-                <nav id="linksNavegacao">
-                    <span className='teste'>VANTAGENS</span>
-                    <span className='teste'>PARCEIROS</span>
-                    <span className='teste'>SEBRAE</span>
-                    <span className='teste'>PLANOS</span>
-                    <span className='teste'>CADASTRE-SE</span>
-                    <span className='teste'>LOGIN</span>
+                <nav id='barraLinks'>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'VANTAGENS'} idElemento={'#bloco2'}></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'PARCEIROS'} idElemento={'#bloco3'}></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'SEBRAE'} idElemento={'#bloco4'}></BarraLinkInterno>
+                    <BarraLinkInterno id='fundoRoxoClaro' name={'PLANOS'} idElemento={'#bloco5'}></BarraLinkInterno>
                 </nav>
 
                 <section id="bloco1">
@@ -47,13 +50,15 @@ function AreaParceiro(){
                     <p>Use nossa plataforma como uma forma de impulsionar ai, aqui, aonde você estiver!</p>
                     <button className='botaoInfo' id='linkCadastro'>TORNE-SE UM PARCEIRO</button>
                 </div>
-                <Carrossel/>
-                {/* <Carrossel
-                    img1={'./Paisagem-1.jpg'}
-                    img2={'./Paisagem-1.jpg'}
-                    img3={'./Paisagem-1.jpg'}
-                    img4={'./Paisagem-1.jpg'}
-                /> */}
+                <Carrossel
+                    img1={Artesanado}
+                    img2={Saude01}
+                    img3={Gastronomia}
+                    img4={Tecnologia}
+                    img5={Saude02}
+                    img6={Educacao}
+                    img7={Propaganda}
+                />
                 </section>
 
                 <section id="bloco2">
@@ -79,7 +84,7 @@ function AreaParceiro(){
             </div>
 
             <section id="bloco3">
-                <BoxInfo title={"Empreendedores que indicam o Impulsione Aí"}></BoxInfo>
+                <BoxInfo title={"Empreendedores que indicam o Impulsione Aí"} idBox={'titleBoxLaranja'} idDivisor={'divisorLaranja'}></BoxInfo>
                 <div className='boxInformations' id="boxLaranja">
                     <Featured title={""} 
                                 nameOne={"TRUFAS DO SIM"} nicheOne={"Gastronomia"}

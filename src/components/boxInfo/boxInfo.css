@@ -1,5 +1,5 @@
-#titleBox {
-    background-color: #8A00DE;
+/*Titulo do Box e suas variações*/
+.titleBox {
     padding-left: 6rem;
     padding-right: 6rem;
     border-radius: 40px;
@@ -7,18 +7,24 @@
     text-align: center;
     z-index: 1;
 }
+#titleBoxLaranja{ background-color: #FFE1CC; }
+#titleBoxRoxo{ background-color: #8A00DE; }
 
-#titleBox h1{
-    /* color: #FFC79E; */
-    font-size: 30px;
+/*H1 do Titulo do Box e suas variações*/
+.titleBox h1{ 
+    font-size: 30px; 
 }
+#titleBoxLaranja h1{ color: #8A00DE !important; }
+#titleBoxRoxo h1{ color: #FFC79E !important; }
 
-#divisor {
-    /* background-color: #8A00DE; */
+/*Divisor e suas variações*/
+.divisor {
     padding-top: 3rem;
     width: 100%;
     margin-top: -30px;
 }
+#divisorRoxo { background-color: #8A00DE; }
+#divisorLaranja { background-color: #FFE1CC; }
 
 /* #boxPrincipal {
     background-color: #8A00DE;

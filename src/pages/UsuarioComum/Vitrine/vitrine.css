@@ -1,3 +1,14 @@
+.buttonInfo {
+    border-radius: 30px;
+    padding: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .produto img{
     width: 10rem;
     border-radius: 15px;
@@ -55,7 +66,8 @@
     border-radius: 20px;
 }
 
-.boxInformations {
+
+.teste {
     padding-bottom: 2em;
     width: 100%;
     display: grid !important ;

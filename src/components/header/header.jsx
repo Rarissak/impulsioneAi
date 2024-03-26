@@ -17,7 +17,10 @@ function Header()
             <div id='headerUpper'>
 
                 <div id="headerSiteName">
-                    <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
+                    <Link
+                    to='/'>
+                        <img id='logo' src={LogoDescritivaIcon} alt="Logo do Impulsione Ai, onde a letra i é no formato de uma mola" /> 
+                    </Link>
                 </div>
 
                 <div id='align'>

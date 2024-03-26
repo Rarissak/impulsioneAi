@@ -10,8 +10,11 @@ button, #headerSearch input
 {
     display: flex;
     justify-content: space-around;
-    height: 50px;
+    height: auto;
     gap: 20px;
+    align-items: center;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
 }
 
 /*===- Alinhamento vertical para items da caixa acima da listra... -===*/

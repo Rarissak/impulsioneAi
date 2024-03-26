@@ -2,7 +2,7 @@
 import React from "react";
 import './login.css';
 // Importando o icon do botão de fechar o modal.
-import iconModalClose from '../../assets/iconLoginModalClose.svg';
+import iconModalClose from '../../../assets/iconLoginModalClose.svg';
 
  {/*Função de fechar o modal. Ele vai adicionar a classe hide na div loginCentralize, 
 que vai fazer a div sumir e aparecer, quando o botão escolhido for clicado.*/}

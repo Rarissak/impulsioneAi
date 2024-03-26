@@ -1,0 +1,18 @@
+import React from 'react';
+import "../barraLinkExterno/barraLinks.css";
+import "../../index.css";
+import {Link} from "react-router-dom";
+
+//Para movimentações para outras páginas
+function BarraLinkExterno({id, name, link}) {
+  return (
+      <>
+        <Link
+        to={link}>
+          <button id={id}>{name}</button>
+        </Link>
+      </>
+    );
+}
+
+export default BarraLinkExterno;

@@ -5,13 +5,13 @@ import '../../index.css';
 // import PuzzleIcon from '../../assets/puzzleIcon.svg'; 
 // import Informations from '../informations/informations.jsx';
 
-function BoxInfo({title}) {
+function BoxInfo({title, idBox, idDivisor}) {
     return(
         <section>
-            <div id="titleBox" className='titleBoxLaranja titleBoxRoxo'>
-                <h1 className="title" id="titulo">{title}</h1>
+            <div className="titleBox" id={idBox}>
+                <h1 className="title">{title}</h1>
             </div>
-            <div id="divisor"></div>
+            <div className='divisor' id={idDivisor}></div>
         </section>
     )
 }

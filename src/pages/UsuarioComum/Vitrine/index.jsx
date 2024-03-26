@@ -5,37 +5,61 @@ import './vitrine.css';
 import Header from '../../../components/header/header';
 import Footer from '../../../components/footer/footer';
 import Carrossel from '../../../components/carrossel/carrossel';
-import BarraLinks from '../../../components/barraLinks/BarraLinks';
+import BarraLinkExterno from '../../../components/barraLinkExterno/BarraLinkExterno';
 import BoxInfo from '../../../components/boxInfo/boxInfo';
 
 import Produto from '../../../components/produto/produto';
 import Trufa from './image 1.jpg';
 import SendMensage from '../../../assets/sendMensageIcon.svg';
 import HeartLine from '../../../assets/heratLineIcon.svg';
-import FullHeart from '../../../assets/fullHeartIcon.svg';
 import Favoritar from '../../../utils/favoritar';
+
+
+//Imagens do carrossel
+import Artesanado from '../../../assets/artesanato.png'
+import Educacao from '../../../assets/educacaoAula.png'
+import Gastronomia from '../../../assets/gastronomiaTrufa.png'
+import Saude01 from '../../../assets/saudeFisio.png'
+import Saude02 from '../../../assets/saudeEstetica.png'
+import Tecnologia from '../../../assets/tecnologia.png'
+import Propaganda from '../../../assets/propagandaImpulsioneAi.png'
 
 function Vitrine(){
     return (
         <>
-        {/* <h1>Teste</h1> */}
         <Header></Header>
         <body>
             <div className='blocoRoxo'>
-                <BarraLinks></BarraLinks>
-                <img src={FullHeart}></img>
-                <img src={HeartLine}></img>
+
+                <nav id='barraLinks'>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'GATRONOMIA'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'MODA'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'ARTESANATO'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'TECNOLOGIA'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'EDUCAÇÃO'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'SAÚDE'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'ESTÉTICA'} link={''}></BarraLinkExterno>
+                    <BarraLinkExterno id='fundoRoxoClaro' name={'DIVERSOS'} link={''}></BarraLinkExterno>
+                </nav>
 
                 <section id="bloco1">
-                <div id="infoBloco1">
-                    <button id='favoritos' onClick={Favoritar}>
-                        <img id='botaoFavoritar' src={HeartLine}/>
-                    </button>
-                    <h1 className='title'>Trufas do Sim</h1>
-                    <p>Nosso propósito é juntar todos os recursos para nosso casamento, então além de você comer uma trufa deliciosa e feita com muito amor & oração, você ainda vai tá ajudando a investir no nosso dia do sim!!!</p>
-                    <button className='buttonInfo'>VER PRODUTOS</button>
-                </div>
-                <Carrossel></Carrossel>
+                    <div id="infoBloco1">
+                        <button id='favoritos' onClick={Favoritar}>
+                            <img id='botaoFavoritar' src={HeartLine}/>
+                        </button>
+                        <h1 className='title'>Trufas do Sim</h1>
+                        <p>Nosso propósito é juntar todos os recursos para nosso casamento, então além de você comer uma trufa deliciosa e feita com muito amor & oração, você ainda vai tá ajudando a investir no nosso dia do sim!!!</p>
+                        <a href='#bloco2' className='buttonInfo'>VER PRODUTOS</a>
+                    </div>
+                    <Carrossel
+                        img1={Artesanado}
+                        img2={Saude01}
+                        img3={Gastronomia}
+                        img4={Tecnologia}
+                        img5={Saude02}
+                        img6={Educacao}
+                        img7={Propaganda}
+                    />
                 </section>
 
                 <section id="bloco2">
@@ -90,8 +114,8 @@ function Vitrine(){
             </div>
 
             <section id="bloco3">
-                <BoxInfo className='title' title={"Avaliações"}></BoxInfo>
-                <div className='boxInformations' id="boxLaranja">
+                <BoxInfo title={"Avaliações"} idBox={'titleBoxLaranja'} idDivisor={'divisorLaranja'}></BoxInfo>
+                <div className='teste' id="boxLaranja">
                     <div className='boxAvaliacoes'>
                         <div className='caixaAvaliacao'>
                             <h3>Keylane Cardoso</h3>
@@ -118,7 +142,6 @@ function Vitrine(){
                         </input>
                         <img src={SendMensage} alt='icon de enviar mensagem'></img>
                     </div>
-                    
                 </div>
             </section>
         </body>
