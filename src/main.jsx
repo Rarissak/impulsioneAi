@@ -11,6 +11,7 @@ import Home from './pages/UsuarioComum/Home/index.jsx';
 import Form from './components/form/form.jsx';
 // import Login from './components/login/login.jsx';
 import Login from './pages/UsuarioComum/login/login.jsx';
+import Sobre from './pages/UsuarioComum/Sobre/sobre.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' Component={Home} />
         <Route path='/login' Component={Login} />
         <Route path='/cadastroParceiro' Component={Form} />
+        <Route path='/sobre' Component={Sobre} />
       </Routes>
     </Router>
   );

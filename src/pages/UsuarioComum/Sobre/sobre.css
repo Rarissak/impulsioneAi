@@ -1,0 +1,39 @@
+.carrossel_texto p{
+  color: #8A00DE;
+}
+
+.boxInformations p {
+    text-align: center;
+    color: #ffffff;
+}
+
+.boxInformationsDegrade {
+    background: linear-gradient(to bottom, #8A00DE, #6B02AB);
+    padding: 3em;
+  }
+  
+  /* Estilos para o conteúdo dentro da caixa */
+  .boxInformationsDegrade .title {
+    color: #FFA15D; /* Cor do título */
+    margin-bottom: 0.9em;
+  }
+  
+  .boxInformationsDegrade .pilares {
+    margin-bottom: 2em;
+  }
+  
+  .boxInformationsDegrade .pilares h3 {
+    color: #ffffff; /* Cor do título */
+  }
+  
+  .boxInformationsDegrade .pilares p {
+    color: #ffffff; /* Cor do texto */
+  }
+
+  .secaoPilares {
+    display: flex;
+  }
+  
+  #breadcrumbs {
+    margin-left: 5em;
+  }
