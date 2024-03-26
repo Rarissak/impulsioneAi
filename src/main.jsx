@@ -36,7 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>
 
-    {/* <AreaParceiro></AreaParceiro> */}
+    {<Home></Home>}
 
     </React.StrictMode>,
 )
