@@ -10,6 +10,34 @@
     font-family: 'Inter';
 }
 
+.senhaValidacoes {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between !important; */
+
+}
+
+#senhaRescrever{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    gap: 5rem
+}
+
+.boxForm {
+    background-color: #ffffff;
+    padding-bottom: 2em;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    /* margin-top: -40px;
+    z-index: 1; */
+}
+
 /*Colocando o elemento loginHeader em cima do loginBody*/
 #formTitle
 {
@@ -41,13 +69,15 @@
   width: 100%;
   margin-top: 45px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 25px;
 }
 
 #formContainer
 {
-    width: 50%;
+    /* width: 50%; */
+    padding-top: 2rem;
 }
 
 
@@ -186,6 +216,19 @@
     font-weight: 700;
     border-radius: 25px;
     border-color: rgba(73, 4, 4, 0);
+    padding: .2rem .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nichoSelecao select
+{
+    background: #ffffff;
+    color: #626064;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 25px;
+    border-color: #8A00DE;
     padding: .2rem .5rem;
     text-align: center;
     cursor: pointer;

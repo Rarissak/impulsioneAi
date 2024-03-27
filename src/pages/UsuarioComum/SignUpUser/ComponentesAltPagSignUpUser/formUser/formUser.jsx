@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import './formUser.css';
+import BoxInfo from "../../../../../components/boxInfo/boxInfo";
 
  /*Função de validação de formatação do contéudo do input CPF
  Vai verificar se o cpf segue o padrão: 123.123.123-12 ou vai ter apenas 11 numeros, tem retorno boleano*/
@@ -71,148 +72,141 @@ function FormUser()
     };
 
     return(
-        
-       <div>
-        
+            <div>
+                <div id="form">
+                    <BoxInfo title={'Cadastro'} idBox='titleBoxBranco' idDivisor='divisorBranco'></BoxInfo>
 
-            {/*Centraliza o formulário no centro da tela.*/}
-            <div id="form"> 
-            
-                <div id="formTitle">
-                    <span>Cadastro</span>
-                </div>
-                {/*Contém todo o formulário e seus campos*/}
-                <form id="formContainer" onSubmit={CadastroRealizado}>
+                    <div className="boxForm">
 
-                {/*Campo das informações pessoais*/}
-                <fieldset className = "fieldSetConfig">
-                            {/*NOME COMPLETO*/}
-                            <div className="fieldType1">
-                                <span className="nameField">Nome Completo</span>
-                                <input 
-                                    type="text" 
-                                    size={43} 
-                                    required/>
-                            </div>
+                        {/*Contém todo o formulário e seus campos*/}
+                        <form id="formContainer" onSubmit={CadastroRealizado}>
 
-                            {/*DATA DE NASCIMENTO*/}
-                            <div className="fieldType1">
-                                <span className="nameField">Data de Nascimento</span>
-                                <input 
-                                type="date"
-                                size={6}
-                                required/>
-                            </div> 
-
-                            {/*CPF*/}
-                            <div className="fieldTypeEspecial, textCentralize">
-                                <div id="centralizeCpfField">
-                                    <span className="nameField">CPF</span>
-                                    <div className="especialCase">
-                                        <input 
-                                            type="text"
-                                            pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$"   
-                                            maxLength="14" 
-                                            required
-                                            value={cpf}
-                                            onChange={handleCpfChange}
-                                            size={15}
-                                            placeholder="123.123.123-12"
-                                            onKeyDown={apenasNumeros}/> 
-                                            
-                                        {/*Se o cpf for inválido está parte vai ser mostrada em baixo do input do campo cpf*/}
-                                        <span className="invalidInput">
-                                            {cpf !== '' && !cpfValido && <span className="error">CPF inválido</span>}
-                                        </span>  
-                                    </div>
-                                </div>  
-                            </div>
-                            
-                            {/*EMAIL*/}
-                            <div className="fieldType2">
-                                <span className="nameField">Email</span>
-                                <div id="ajustandoMensagemInvalida"l>
+                            {/*Campo das informações pessoais*/}
+                            <fieldset className = "fieldSetConfig">
+                                {/*NOME COMPLETO*/}
+                                <div className="fieldType1">
+                                    <span className="nameField">Nome Completo</span>
                                     <input 
-                                        type="email"
-                                        required
-                                        size={29}
-                                        value={email}
-                                        onChange={handleEmailChange}/>
-
-                                    {/*Mensagem de error posicionada para aparecer...*/}
-                                    <span className="invalidInput">
-                                        {email !== '' && !emailValido && <span className="error">Email inválido</span>}
-                                    </span>
+                                        type="text" 
+                                        size={43} 
+                                        required/>
                                 </div>
-                              
-                            </div>
-                        
-                    </fieldset>
-                    
-                    {/*CAMPO DA SENHA*/}
-                    <fieldset className="fieldSetConfig">
 
-                        {/*SENHA*/}
-                        <div className="fieldType1">
-                            <span className="nameField">Senha</span>
-                            <input 
-                            type="password"
-                            required
-                            size={27}
-                            value={confirmarSenha} 
-                            onChange={(e) => setConfirmarSenha(e.target.value)} 
-                            minLength={8}/>
-                        </div>
+                                {/*DATA DE NASCIMENTO*/}
+                                <div className="fieldType1">
+                                    <span className="nameField">Data de Nascimento</span>
+                                    <input 
+                                        type="date"
+                                        size={6}
+                                        required/>
+                                </div> 
 
-                        {/*CONFIRMAR SENHA*/}
-                        <div className="fieldType1">
-                            <span className="nameField">Reescreva a Senha</span>
-                            <input 
-                            type="password"
-                            required
-                            size={28}
-                            value={senha} 
-                            onChange={(e) =>{ setSenha(e.target.value);}}
-                            minLength={8}/>
+                                {/*CPF*/}
+                                <div className="fieldTypeEspecial, textCentralize">
+                                    <div id="centralizeCpfField">
+                                        <span className="nameField">CPF</span>
+                                        <div className="especialCase">
+                                            <input 
+                                                type="text"
+                                                pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$"   
+                                                maxLength="14" 
+                                                required
+                                                value={cpf}
+                                                onChange={handleCpfChange}
+                                                size={15}
+                                                placeholder="123.123.123-12"
+                                                onKeyDown={apenasNumeros}/> 
+                                                    
+                                            {/*Se o cpf for inválido está parte vai ser mostrada em baixo do input do campo cpf*/}
+                                            <span className="invalidInput">
+                                                {cpf !== '' && !cpfValido && <span className="error">CPF inválido</span>}
+                                            </span>  
+                                        </div>
+                                    </div>  
+                                </div>
+                                    
+                                {/*EMAIL*/}
+                                <div className="fieldType2">
+                                    <span className="nameField">Email</span>
+                                    <div id="ajustandoMensagemInvalida"l>
+                                        <input 
+                                            type="email"
+                                            required
+                                            size={29}
+                                            value={email}
+                                            onChange={handleEmailChange}/>
 
-                            {/*Se ambas as senhas forem compatíveis, vai ser mostrado que os campos são válidos*/}
-                            <span>
-                                {/* Exibir mensagem de sucesso se as senhas forem compatíveis */}
-                                {(senha !== '' && confirmarSenha !== '') && senha === confirmarSenha && (
-                                <span className="validInput">As senhas são compatíveis!</span>
-                                )}
-                            </span>
+                                        {/*Mensagem de error posicionada para aparecer...*/}
+                                        <span className="invalidInput">
+                                            {email !== '' && !emailValido && <span className="error">Email inválido</span>}
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </fieldset>
                             
-                        </div>
+                            {/*CAMPO DA SENHA*/}
+                            <fieldset className="fieldSetConfig">
 
-                        {/*Orientação de preenchimento de senha*/}
-                        <div id="passwordRequery">
-                            <span>*Mínimo de 8 caracteres</span>
-                            <span>*Letras minusculas</span>
-                            <span>*Letras Maiúsculas</span>
-                            <span>*Números</span>
-                            <span>*Caracteres especiais</span>
-                        </div>
-                        
-                        {/*Botões do cadastro*/}
-                        <div id="buttonsForm">
-                            <button id="cadastradoButton">JÁ POSSUO CADASTRO</button>
-                            <button id="cadastrarButton" type="submit" >CADASTRAR</button>
-                        </div>
+                                {/*SENHA*/}
+                                <div className="fieldType1">
+                                    <span className="nameField">Senha</span>
+                                    <input 
+                                    type="password"
+                                    required
+                                    size={27}
+                                    value={confirmarSenha} 
+                                    onChange={(e) => setConfirmarSenha(e.target.value)} 
+                                    minLength={8}/>
+                                </div>
 
-                    </fieldset>
+                                {/*CONFIRMAR SENHA*/}
+                                <div className="fieldType1">
+                                    <span className="nameField">Reescreva a Senha</span>
+                                    <input 
+                                    type="password"
+                                    required
+                                    size={28}
+                                    value={senha} 
+                                    onChange={(e) =>{ setSenha(e.target.value);}}
+                                    minLength={8}/>
 
-            </form>
+                                    {/*Se ambas as senhas forem compatíveis, vai ser mostrado que os campos são válidos*/}
+                                    <span>
+                                        {/* Exibir mensagem de sucesso se as senhas forem compatíveis */}
+                                        {(senha !== '' && confirmarSenha !== '') && senha === confirmarSenha && (
+                                        <span className="validInput">As senhas são compatíveis!</span>
+                                        )}
+                                    </span>
+                                    
+                                </div>
 
-        </div>
+                                {/*Orientação de preenchimento de senha*/}
+                                <div id="passwordRequery">
+                                    <span>*Mínimo de 8 caracteres</span>
+                                    <span>*Letras minusculas</span>
+                                    <span>*Letras Maiúsculas</span>
+                                    <span>*Números</span>
+                                    <span>*Caracteres especiais</span>
+                                </div>
+                                
+                                {/*Botões do cadastro*/}
+                                <div id="buttonsForm">
+                                    <button id="cadastradoButton">JÁ POSSUO CADASTRO</button>
+                                    <button id="cadastrarButton" type="submit" >CADASTRAR</button>
+                                </div>
 
-         {/*Abrindo um espaço entre o footer e o formulário.*/}
-        <div id="beforeFooter">
+                            </fieldset>
+                        </form>
+                    </div>
 
-        </div>
-       </div> 
-    
+                </div>
 
+                {/*Abrindo um espaço entre o footer e o formulário.*/}
+                <div id="beforeFooter"></div>
+
+            </div>
     );
 }
 

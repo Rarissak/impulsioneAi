@@ -24,6 +24,7 @@ import Saude01 from '../../../assets/saudeFisio.png'
 import Saude02 from '../../../assets/saudeEstetica.png'
 import Tecnologia from '../../../assets/tecnologia.png'
 import Propaganda from '../../../assets/propagandaImpulsioneAi.png'
+import { Link } from 'react-router-dom';
     
 
 
@@ -48,7 +49,10 @@ function AreaParceiro(){
                 <div id="infoBloco1">
                     <h1 className='title'>Dê um salto no seu negócio!</h1>
                     <p>Use nossa plataforma como uma forma de impulsionar ai, aqui, aonde você estiver!</p>
-                    <button className='botaoInfo' id='linkCadastro'>TORNE-SE UM PARCEIRO</button>
+                    <Link
+                    to='/cadastroParceiro'>
+                        <button className='botaoInfo' id='linkCadastro'>TORNE-SE UM PARCEIRO</button>
+                    </Link>
                 </div>
                 <Carrossel
                     img1={Artesanado}

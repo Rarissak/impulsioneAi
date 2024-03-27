@@ -15,42 +15,44 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    background-color: #f6e8ff;
+    /* background-color: #f6e8ff; */
 }
 
 /*Definindo configurações básica dos botões*/
-#buttonCentralize button
+.buttons
 {
     margin-top: 15px;
-    color: white;
-    font-size: 14px;
+    color: #B741FF;
+    font-size: 16px;
     font-weight: 800;
     padding: .2rem 1.5rem;
     margin-bottom: 45px;
     cursor: pointer;
+    background-color: #f6e8ff;
 }
 
 /*Definindo cor*/
-#partnerButton
+#buttonSelecionado
 {
     background-color: #B741FF;
+    color: #ffffff;
 }
 
-#userButton
+/* #buttonNormal
 {
     background-color: #FF8D3B;
-}
+} */
 
 /*Mudando a cor dos botões sempre que o cursor estiver em cima deles*/
-#partnerButton:hover
+/* #partnerButton:hover
 {
     transition: .2s;
     background-color: #8c32c4;
-}
+} */
 
 
-#userButton:hover
+.buttons:hover
 {
     transition: .2s;
-    background-color: #be6a2d;
+    background-color:  #ffb47e;
 }

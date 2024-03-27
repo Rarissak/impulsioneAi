@@ -7,9 +7,13 @@
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 0.75rem;
-    margin-bottom: auto; /* Tentativa de deixar o footer fixo lá em baixo*/
+     /* Tentativa de deixar o footer fixo lá em baixo*/
+    /* position: fixed;
+    bottom: 0; */
 
   }
+
+
 
   .logo {
     width: 12rem;
