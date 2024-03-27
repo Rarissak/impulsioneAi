@@ -10,18 +10,23 @@ import Home from './pages/UsuarioComum/Home/index.jsx';
 import Form from './components/form/form.jsx';
 import Login from './pages/UsuarioComum/login/login.jsx';
 import Sobre from './pages/UsuarioComum/Sobre/sobre.jsx';
+import CadastroUsuario from '../src/pages/UsuarioComum/SignUpUser/SignUpUser.jsx';
+import CadastroParceiro from '../src/pages/Parceiro/SignUpPartner/SignUpPartner.jsx';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/vitrine' Component={Vitrine} />
-        <Route path='/areaParceiro' Component={AreaParceiro} />
         <Route path='/' Component={Home} />
-        <Route path='/login' Component={Login} />
-        <Route path='/cadastroParceiro' Component={Form} />
         <Route path='/sobre' Component={Sobre} />
+        <Route path='/areaParceiro' Component={AreaParceiro} />
+        <Route path='/login' Component={Login} />
+        <Route path='/cadastroUsuario' Component={CadastroUsuario} />
+        <Route path='/cadastroParceiro' Component={CadastroParceiro} />
+
+        <Route path='/vitrine' Component={Vitrine} />
+        
       </Routes>
     </Router>
   );

@@ -7,19 +7,17 @@
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 0.75rem;
-     /* Tentativa de deixar o footer fixo lá em baixo*/
-    /* position: fixed;
-    bottom: 0; */
-
+   
   }
-
-
 
   .logo {
     width: 12rem;
+    margin-left: 80px;
+   
   }
 
   .footer-content {
+   
     display: flex;
     justify-content: center;
     justify-content: space-between;
@@ -40,6 +38,7 @@
   }
 
   .redes-links {
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,12 +47,13 @@
   .redes-links_p-redes {
     align-self: center;
     padding-bottom: 1em;
+    font-size: 14px;
   }
   .redes-links_img-redes {
     width: 100%;
     display: flex;
     justify-content: space-between !important;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   /* .redes-links_img-redes a {
