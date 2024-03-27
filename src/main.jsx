@@ -12,7 +12,8 @@ import Login from './pages/UsuarioComum/login/login.jsx';
 import Sobre from './pages/UsuarioComum/Sobre/sobre.jsx';
 import CadastroUsuario from '../src/pages/UsuarioComum/SignUpUser/SignUpUser.jsx';
 import CadastroParceiro from '../src/pages/Parceiro/SignUpPartner/SignUpPartner.jsx';
-
+import EsqueciSenha from '../src/pages/UsuarioComum/forgotPassword/forgotPassword.jsx';
+import AlterarSenha from '../src/pages/UsuarioComum/changePassword/changePassword.jsx';
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
         <Route path='/cadastroParceiro' Component={CadastroParceiro} />
 
         <Route path='/vitrine' Component={Vitrine} />
-        
+        <Route path='/esqueciSenha' Component={EsqueciSenha}/>
+        <Route path='/alterarSenha' Component={AlterarSenha}/>
+
       </Routes>
     </Router>
   );

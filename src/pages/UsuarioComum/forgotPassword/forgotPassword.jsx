@@ -1,15 +1,17 @@
+
 import React from "react";
-import './login.css';
+import './forgotPassword.css';
 // Importando o icon do botão de fechar o modal.
-import iconModalClose from '../../../assets/iconLoginModalClose.svg';
-import { Link } from "react-router-dom";
+import iconModalClose from '../../assets/iconLoginModalClose.svg';
 
  {/*Função de fechar o modal. Ele vai adicionar a classe hide na div loginCentralize, 
 que vai fazer a div sumir e aparecer, quando o botão escolhido for clicado.*/}
-function ToggleModal()
+export function ToggleModalForgot()
 {
-    const loginCentralize = document.querySelector("#loginCentralize");
-    loginCentralize.classList.toggle("hide");
+    const forgotCentralize = document.querySelector("#forgotCentralize");
+    forgotCentralize.classList.toggle("hide");
+    const back = document.querySelector("#back");
+    back.classList.toggle("hide");
 }
 
 
@@ -20,50 +22,38 @@ function Login()
         // Fundo do componente, que será responsável por fixar o componente na tela.
         <div id="back">
              {/*Botão responsável por abrir o modal, Por a função ToggleModal no botão que for desajável mais tarde.*/}
-            <button id="openModal" onClick={ToggleModal}>Abrir Modal</button>
-
+           {/*  <button id="openModal" onClick={ToggleModal}>Abrir Modal</button>.*/}
              {/*Div responsável pela centralização do container do login e adição da cor do fundo*/}
-            <div id="loginCentralize" className="hide">
+            <div id="forgotCentralize">
 
                  {/*Div que vai conter todos os elementos principais do login. Ex: inputs de email e senha*/}
-                <div id="loginContainer">
+                <div id="forgotContainer">
 
                     {/*Botão de fechar o modal*/}
                     <div>
                          {/*Já está com a função de fechar o modal*/}
-                        <button id = "closeModal" onClick={ToggleModal}>
+                        <button id = "closeModal" onClick={ToggleModalForgot}>
                             <img src={iconModalClose} alt="icone para fechar o modal, tem formato de X"/>
                         </button>
                     </div>
                     
                      {/*Titulo do componente login*/}
-                    <div id="loginHeader">
-                        <span>Login</span>
+                    <div id="forgotHeader">
+                        <span>Esqueci minha senha</span>
                     </div>
 
                      {/*Div contendo os elementos do login*/}
-                    <div id="loginBody">
+                    <div id="forgotBody">
 
                          {/*Input de email*/}
-                        <div className="loginInputs">
-                            <span className="nameInput">Usuário</span>
+                        <div className="forgotInput">
+                            <span className="nameInput">Insira o email cadastrado</span>
                             <input type="email"/>
                         </div>
 
-                         {/*Input Senha*/}
-                        <div className="loginInputs">
-                            <span className="nameInput">Senha</span>
-                            <input type="password"/>
-                            <Link
-                            to='/esqueciSenha'>
-                                <span className="forgotPassword">Esqueci minha senha</span> 
-                            </Link>
-                        </div>
-
                          {/*Botões de logar e ir para cadastro*/}
-                        <div id="loginButtons">
-                            <button id="loginButtonSignIn">ENTRAR</button>
-                            <button id="loginButtonSignUp">Não possuo cadastro</button>
+                        <div id="forgotButton">
+                            <button id="forgotButtonSubmit">ENVIAR</button>
                         </div>
                     </div>
                     
@@ -76,5 +66,10 @@ function Login()
 
     );
 }
+
+
+
+
+
 
 export default Login;
