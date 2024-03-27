@@ -9,33 +9,28 @@
     font-weight: 500;
 }
 
-.produto img{
-    width: 10rem;
-    border-radius: 15px;
+#bloco2{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem !important;
 }
 
-.produto {
-    display:flex;
-    align-items: center;
-    gap: 1rem;
-    /* width: 20%; */
-}
-
-.infoProduto{
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    /* width: 30%; */
-
+#textBranco {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color:#FFE1CC;
 }
 
 #gradeProdutos {
     margin-top: 5rem;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 30rem 30rem 30rem;
-    grid-gap: 4rem
-   
+    grid-gap: 4rem */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    
 }
 
 #favoritos img{
@@ -51,10 +46,14 @@
 }
 
 .boxAvaliacoes {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 40rem 40rem;
     gap: 5rem;
-    width: 80%;
+    width: 80%; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 .caixaAvaliacao {
@@ -64,6 +63,7 @@
     display: grid;
     gap: 0.75rem;
     border-radius: 20px;
+    width: 48%;
 }
 
 

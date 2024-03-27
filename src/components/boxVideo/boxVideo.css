@@ -3,11 +3,9 @@
     justify-content: center;
     /* background-color: blueviolet; */
     align-items: center;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    margin-left: 3em;
-
-    
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 3em; 
     margin-right: 3em;
 }
 
@@ -32,5 +30,5 @@
 }
 
 #boxInfoVideo {
-    width: 45%;
+    width: 35%;
 }

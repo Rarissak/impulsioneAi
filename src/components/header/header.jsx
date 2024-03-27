@@ -5,12 +5,15 @@ import HandshakeIconSvg from '../../assets/handshakeIcon.svg';
 import SearchIconSvg from '../../assets/searchIcon.svg';
 import UserIconSvg from '../../assets/userIcon.svg';
 import LogoDescritivaIcon from '../../assets/logoDescritivaIcon.svg';
-
-import {Link} from "react-router-dom";
-
+import { Link } from 'react-router-dom';
+import Login, { ToggleModal } from '../../pages/UsuarioComum/login/login';
 
 function Header()
 {
+    const handleComponentLogin = () => {
+        ToggleModal();
+     };
+
     return (
         <div>
 
@@ -47,14 +50,15 @@ function Header()
                         <img src={SearchIconSvg} alt="Icone de Lupa, com o sentido de buscar informações" />
                     </div>
                     
-                    {/* Esse link está com problemas */}
-                    <Link 
+                    {/* Botão de login */}
+                    <button 
                     id='headerLogin'
-                    className='centralizeItems, headerScreenLinks'
-                    to='/login'>
+                    className='centralizeItems, headerScreenButtons'
+                    onClick={handleComponentLogin}>
                         <img src={UserIconSvg} alt="Icone, para informar login" className='headerIcon'/>
                         <span>Login</span>  
-                    </Link>
+                    </button>
+                    {<Login />}
 
 
                     <Link
@@ -76,41 +80,6 @@ function Header()
                         backgroundColor: '#7900c3', // Cor de fundo da linha horizontal
                         margin: 0
                     }} />
-
-            {/* <div id='headerCategory'>
-                <button 
-                className='headerCategoryButtons'
-                >GASTRONOMIA</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >MODA</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >ARTESANATO</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >TECNOLOGIA</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >EDUCAÇÃO</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >SAÚDE</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >ESTÉTICA</button>
-
-                <button 
-                className='headerCategoryButtons'
-                >DIVERSOS</button>
-            </div> */}
-            
         </div>
        
 

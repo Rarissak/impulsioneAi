@@ -12,14 +12,20 @@
     flex-direction: column;
 }
 
+#titleBorda{
+    width: 100%;
+}
 
 #featuredTitle {
     font-size: 30px;
     text-align: center;
-    background-color: #d16210;
+    background-color: #FF7D1E;
     color: #ffffff;
     border-radius: 30px;
+    padding: 0.75rem;
     font-family: "Baloo 2", sans-serif;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 /* #featuredContainer button
@@ -55,12 +61,37 @@
     justify-content: flex-start; /*Centralizando horizontalmente os elementos */
     flex-direction: column;/*Com isto a cenrralização horizontal vira vertical. */
     text-align: center; /*Centralizando texto dentro do retangulo*/
-    background-color: #ffe1cc; /*Definindo a cor de fundo*/
+    /* background-color: #ffe1cc; Definindo a cor de fundo */
     width: 15rem; /*Definindo o tamanho dele*/
     height: 20rem;
     gap: 10px;
     border-radius: 20px; /*Arredodamento do retangulo*/
+    text-decoration: none !important;
+    transition: .2s;
+    cursor: pointer;
 }
+
+.featuredSquare:hover{
+    background-color: #CE5700;
+    transition: .4s;
+    background-color: #ffa15d;
+
+}
+
+.featuredSquare span
+{
+    text-decoration-style: none !important;
+}
+
+#quadradoLaranja{ background-color: #ffe1cc !important}
+#quadradoBranco{ background-color: #ffffff; }
+
+#quadradoLaranja:hover {
+    transition: .4s;
+    background-color: #ffc59c !important;}
+#quadradoBranco:hover{ 
+    transition: .4s;
+    background-color: #ffc59c !important; }
 
 .data {
     display: flex;
@@ -82,13 +113,16 @@
 .featuredName
 {
     margin-top: 5px; /*Espaçamento em cima, para deixar mais espaço entre o texto e a borda da foto*/
-    color: #d16210;
+    color: #CE5700 !important;
     font-size: 16px;
     font-weight:700;
+    text-transform: uppercase;
+    text-decoration: none !important;
 }
 
 .featuredNiche
 {
     color: #d16210;
     margin-bottom: 5px; /*Espaçamento em baixo, para deixar mais espaço entre o texto e a borda do retangulo*/
+    text-decoration: none !important;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './produto.css';
 import '../../index.css';
 
-function Produto(img, name, price){
+function Produto({img, name, price}){
     return (
         <div id='produto'>
             <img alt='produto'src={img}></img>

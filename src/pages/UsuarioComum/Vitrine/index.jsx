@@ -70,48 +70,12 @@ function Vitrine(){
                         <h2 id="textBranco">Nossos Produtos</h2>
                     </div>
                     <div id="gradeProdutos">
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO bem grande pra ocupar muito espaço</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div>
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div> 
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div> 
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div> 
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div> 
-                        <div className='produto'>
-                            <img alt='produto' src={Trufa}></img>
-                            <div className='infoProduto'>
-                                <h3>NOME DO PRODUTO</h3>
-                                <p>R$ 0,00</p>
-                            </div>
-                        </div>                
+                        <Produto img={Trufa} name='Crocante' price={'5,00'}></Produto>
+                        <Produto img={Trufa} name='Oreo' price={'5,00'}></Produto>
+                        <Produto img={Trufa} name='Ninho' price={'5,00'}></Produto>
+                        <Produto img={Trufa} name='Bem-Casado' price={'5,00'}></Produto>
+                        <Produto img={Trufa} name='Maracuja' price={'5,00'}></Produto>
+                        <Produto img={Trufa} name='Limão' price={'5,00'}></Produto>
                     </div>
                 </section>
             </div>

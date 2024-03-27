@@ -17,6 +17,7 @@ import Saude01 from '../../../assets/saudeFisio.png';
 import Saude02 from '../../../assets/saudeEstetica.png';
 import Tecnologia from '../../../assets/tecnologia.png';
 import Propaganda from '../../../assets/propagandaImpulsioneAi.png';
+import { Link } from 'react-router-dom';
 
 function Sobre() {
   const crumbs = [
@@ -91,9 +92,9 @@ function Sobre() {
 
       </section>
 
-      <div id='chamada'>
-        <p>Torne-se um parceiro! <a href=''><strong>Conheça nossas vantagens</strong></a></p>
-      </div>
+      <Link id='chamada' to='/areaParceiro'>
+        <p>Torne-se um parceiro! <strong>Conheça nossas vantagens</strong></p>
+      </Link>
 
       <section>
         <BoxVideo video={"https://www.youtube.com/embed/CxwjOwNgx30?si=LCEVyJluPePxyanL"}

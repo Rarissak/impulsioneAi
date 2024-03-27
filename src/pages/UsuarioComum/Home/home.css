@@ -48,15 +48,21 @@
 }
 
 #chamada {
-    background-color: #F7EBFF;
     color: #8A00DE;
-    padding: 1em;
     text-align: center;
+    text-decoration: none;
+    width: 100%;
 }
 
-#chamada p a {
-    text-decoration: none;
+#chamada p{
+    background-color: #F7EBFF;
+    width: 100%;
+    padding: 1em;
 }
+
+/* #chamada p a {
+    text-decoration: none;
+} */
 
 .carrossel {
     display:flex;
@@ -71,8 +77,25 @@
     color: #FF7D1E;
 }
 
+.carrossel_texto{
+    width: 30%;
+}
+
 #destaques {
-    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#linhaDestaques{
+    display: flex;
+    flex-direction: row;
+    /* gap: 2rem; */
+    justify-content: space-between;
+    width: 100%;
 }
 
 #tituloDepoimentos {
@@ -105,3 +128,4 @@
     margin-right: 3em;
     margin-bottom: 5em;
 }
+

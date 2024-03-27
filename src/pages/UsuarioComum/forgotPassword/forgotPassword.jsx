@@ -2,7 +2,8 @@
 import React from "react";
 import './forgotPassword.css';
 // Importando o icon do botão de fechar o modal.
-import iconModalClose from '../../assets/iconLoginModalClose.svg';
+import iconModalClose from '../../../assets/iconLoginModalClose.svg';
+import BoxInfo from '../../../components/boxInfo/boxInfo';
 
  {/*Função de fechar o modal. Ele vai adicionar a classe hide na div loginCentralize, 
 que vai fazer a div sumir e aparecer, quando o botão escolhido for clicado.*/}
@@ -36,7 +37,7 @@ function Login()
                             <img src={iconModalClose} alt="icone para fechar o modal, tem formato de X"/>
                         </button>
                     </div>
-                    
+                    <BoxInfo title={'Esqueci minha senha'} idBox='titleBoxBranco' idDivisor='divisorBranco'></BoxInfo>
                      {/*Titulo do componente login*/}
                     <div id="forgotHeader">
                         <span>Esqueci minha senha</span>

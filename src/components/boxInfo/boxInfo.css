@@ -27,7 +27,8 @@
 }
 #divisorRoxo { background-color: #8A00DE; }
 #divisorLaranja { background-color: #FFE1CC; }
-#divisorBranco { background-color: #ffffff; }
+#divisorBranco { background-color: #ffffff; 
+                border-top-left-radius: 20px; border-top-right-radius: 20px;}
 
 
 /* #boxPrincipal {

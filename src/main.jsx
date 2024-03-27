@@ -8,7 +8,7 @@ import AreaParceiro from './pages/UsuarioComum/AreaParceiro/index.jsx';
 import Vitrine from './pages/UsuarioComum/Vitrine/index.jsx';
 import Home from './pages/UsuarioComum/Home/index.jsx';
 import Form from './components/form/form.jsx';
-import Login from './pages/UsuarioComum/login/login.jsx';
+import Login from './pages/UsuarioComum/login/login';
 import Sobre from './pages/UsuarioComum/Sobre/sobre.jsx';
 import CadastroUsuario from '../src/pages/UsuarioComum/SignUpUser/SignUpUser.jsx';
 import CadastroParceiro from '../src/pages/Parceiro/SignUpPartner/SignUpPartner.jsx';

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:wght@100..900&display=swap');
+
 /* CÓDIGO DO HEADER */
 
 /*===- Configuração de  botão selecionado -===*/
@@ -119,11 +121,12 @@
 
 #boxLaranja{
     background-color: #FFE1CC !important;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
 }
 
 .titleBoxLaranja {
     background-color: #FFE1CC !important;
-
 }
 
 /* .title {
@@ -141,13 +144,8 @@
     margin-top: -30px; */
 }
 
-.featuredSquare {
-    background-color: #ffffff !important;
-}
-
 #bloco3 {
-    margin-top: -40px
-
+    margin-top: -40px;
 }
 
 #titleVideo {
@@ -158,6 +156,7 @@
 #textVideo {
     font-size: 16px;
 }
+
 
 /* ESTILO DO BLOCO 5 */
 
@@ -193,7 +192,16 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2rem;
+    width: 100%;
 }
+
+.planos {
+    /* margin-left: 2.5rem;
+    margin-right: 2.5rem; */
+    margin: 0 auto;
+    width: 80%;
+}
+
 
 .plano {
     width: 30%;
@@ -205,7 +213,7 @@
     /* height: auto;
     margin-bottom: 2rem; */
     height: 38rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* justify-content: center; */
     /* justify-content: space-between; */
 }
@@ -267,4 +275,18 @@
     scale: 1.02 !important;
 }
 
+#barraLinksLogin {
+    background-color: #CC78FF;
+    border-radius: 20px;
+}
+#barraLinksLogin span {
+    color: #ffffff;
+    font-size: 15px !important;
+    font-family: "Baloo 2", sans-serif;
+}
 
+#barraLinksLogin:hover{
+    transition: .35s !important;
+    background-color: #8A00DE !important;
+    scale: 1.02 !important;
+}

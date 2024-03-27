@@ -58,11 +58,19 @@ button, #headerSearch input
 }
 
 .headerScreenLinks:hover
-
 {
     transition: .4s;
-    background-color: #f7f5f4;
+    background-color: #ffa15d;
+    border-radius: 20px;
 }
+
+.headerScreenButtons:hover
+{
+    transition: .4s !important;
+    background-color: #ffa15d !important;
+    border-radius: 20px !important;
+}
+
 .headerIcon:hover
 {
     color: #ffffff;
@@ -128,6 +136,23 @@ button, #headerSearch input
     align-content: center;
     gap: 8px;
 }
+
+.headerScreenButtons:hover{
+    background-color: red;
+}
+
+.headerScreenButtons:hover{
+    background-color: red;
+}
+
+#headerLogin
+{
+    background-color: transparent;
+    cursor: pointer;
+    color: #7900C3;
+    font-weight: 500;
+}
+
 
 #headerParceiros img
 {

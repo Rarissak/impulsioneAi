@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 // import '././././index.css';
 import './areaParceiro.css';
 import Header from '../../../components/header/header';
-import Featured from '../../../components/featured/featured';
 import Footer from '../../../components/footer/footer';
 import Carrossel from '../../../components/carrossel/carrossel';
 import BarraLinkInterno from '../../../components/barraLinkInterno/barraLinkInterno';
@@ -11,7 +10,12 @@ import BoxInfo from '../../../components/boxInfo/boxInfo';
 import BoxVideo from '../../../components/boxVideo/boxVideo';
 import Informations from '../../../components/informations/informations';
 import BarraLinkExterno from '../../../components/barraLinkExterno/BarraLinkExterno';
+import Destaque from '../../../components/featured/destaque.jsx';
+import TituloBorda from '../../../components/featured/titleBorda.jsx';
 
+import { Link } from 'react-router-dom';
+
+//Icons para essa page
 import IconAlcance from '../../../assets/iconAlcance.svg';
 import IconParceria from '../../../assets/iconParceria.svg';
 import IconSuporte from '../../../assets/iconSuporte.svg';
@@ -25,13 +29,24 @@ import Saude01 from '../../../assets/saudeFisio.png'
 import Saude02 from '../../../assets/saudeEstetica.png'
 import Tecnologia from '../../../assets/tecnologia.png'
 import Propaganda from '../../../assets/propagandaImpulsioneAi.png'
-import { Link } from 'react-router-dom';
     
-
+//Imagens detaques
+import TrufasDoSim from '../../../assets/trufasDoSim.png';
+import Artelane from '../../../assets/artelane.png';
+import pitagoras from '../../../assets/pitagoras.png';
+import Fisio from '../../../assets/fisioEmcasa.png';
+import vintageVibe from '../../../assets/vintageVibe.png';
 
 // import Produto from '../../../components/produto/produto';
 
+import Login, { ToggleModal } from '../login/login.jsx';
+    
+
 function AreaParceiro(){
+
+    const handleComponentLogin = () => {
+        ToggleModal();
+     };
 
     return (
         <>
@@ -45,7 +60,14 @@ function AreaParceiro(){
                     <BarraLinkInterno id='fundoRoxoClaro' name={'SEBRAE'} idElemento='bloco4'></BarraLinkInterno>
                     <BarraLinkInterno id='fundoRoxoClaro' name={'PLANOS'} idElemento= 'bloco5'></BarraLinkInterno>
                     <BarraLinkExterno id='fundoRoxoClaro' name={'CADASTRE-SE'} link={'/cadastroParceiro'}></BarraLinkExterno>
-                    <BarraLinkExterno id='fundoRoxoClaro' name={'LOGIN'} link={'/login'}></BarraLinkExterno>
+                    {/* <BarraLinkExterno id='fundoRoxoClaro' name={''} link={''}></BarraLinkExterno> */}
+                    <button 
+                    id='barraLinksLogin'
+                    onClick={handleComponentLogin}>
+                        <span>LOGIN</span>  
+                    </button>                        
+                    {<Login />}
+                    
                 </nav>
 
                 <section id="bloco1">
@@ -92,14 +114,12 @@ function AreaParceiro(){
 
             <section id="bloco3">
                 <BoxInfo title={"Empreendedores que indicam o Impulsione Aí"} idBox={'titleBoxLaranja'} idDivisor={'divisorLaranja'}></BoxInfo>
-                <div className='boxInformations' id="boxLaranja">
-                    <Featured title={""} 
-                                nameOne={"TRUFAS DO SIM"} nicheOne={"Gastronomia"}
-                                nameTwo={"TESTE"} nicheTwo={"Teste"}
-                                nameThree={"FISIOTERAPIA"} nicheThree={"Saúde"}
-                                nameFour={"TESTE"} nicheFour={"Artesanato"}
-                                nameFive={"Logicando"} nicheFive={"Educação"}>
-                    </Featured>
+                <div className='boxInformations' id="boxLaranja">              
+                    <Destaque idBox={'quadradoBranco'} path={'/vitrine'} foto={TrufasDoSim} nome={'Trufas do Sim'} nicho={'Gastronomia'}></Destaque>
+                    <Destaque idBox={'quadradoBranco'} path={''} foto={Fisio} nome={'Fisio em casa'} nicho={'Saúde'}></Destaque>
+                    <Destaque idBox={'quadradoBranco'} path={''} foto={Artelane} nome={'Artelane'} nicho={'Artesanato'}></Destaque>
+                    <Destaque idBox={'quadradoBranco'} path={''} foto={vintageVibe} nome={'Vintage Vibe'} nicho={'Moda'}></Destaque>
+                    <Destaque idBox={'quadradoBranco'} path={''} foto={pitagoras} nome={'Pitágoras'} nicho={'Educação'}></Destaque>
                 </div>
             </section>
 
@@ -110,8 +130,8 @@ function AreaParceiro(){
                 </BoxVideo>
             </section>
 
-            <section id="bloco5">
-                <h1 className='title'>NOSSOS PLANOS</h1>
+            <section id="bloco5" className='planos'>
+                <TituloBorda title='Nossos Planos'></TituloBorda>
                 <div id="boxPlanos">
                     <div className='plano'>
                         <div className='vantagem'>

@@ -73,9 +73,11 @@ o modal vai continuar na mesma posição.*/
 /*Configurando o elemento responsável pelos inputs de login*/
 #loginBody
 {
-    border-radius: 33px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: #ffffff;
-    padding: 4rem 2.3rem  1.3rem 2.3rem;
+    /* padding: 4rem 2.3rem  1.3rem 2.3rem; */
+    padding: 2rem;
     z-index: 22;
     display: flex;
     flex-direction: column;
@@ -180,7 +182,11 @@ Aparecer e desaparecer*/
     background-color: #ffffff00;
     transition: .2s;
     margin-left: 100%;
-    top: 41px;
+    top: 10px !important;
+}
+
+#closeModal img{
+    width: 1.5rem;
 }
 
 #closeModal:hover
@@ -189,4 +195,6 @@ Aparecer e desaparecer*/
     background-color: #FF7D1E;
 }
 
-
+#loginButtonSignUp {
+    text-decoration: none !important;
+}
